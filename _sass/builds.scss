@@ -1,0 +1,47 @@
+.builds-section {
+  margin-top: $section-spacing;
+  .inner-builds-section {
+    .section-heading {
+    }
+    .builds-text {
+    }
+    .list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.build-item {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-reverse;
+  align-items: center;
+  width: 100%;
+  margin-top: $list-item-spacing;
+  @include lg {
+    flex-direction: row;
+    flex-flow: row;
+    align-items: flex-start;
+  }
+  .img-container {
+    img {
+      max-width: 100%;
+      margin-top: 10px;
+      @include lg {
+        max-width: 400px;
+        margin-top: 0px;
+        margin-right: 20px;
+      }
+    }
+  }
+  .text-container {
+    h3 {
+      padding: 0;
+      margin: 0;
+    }
+    p {
+    }
+  }
+}

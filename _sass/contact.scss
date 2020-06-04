@@ -1,0 +1,17 @@
+.contact {
+  position: relative;
+  // background-color: $light-grey;
+  .inner-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    h1 {
+      margin: 20px;
+    }
+    a {
+      margin: 10px;
+    }
+  }
+}

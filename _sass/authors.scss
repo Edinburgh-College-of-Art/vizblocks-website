@@ -1,0 +1,67 @@
+$flex-break: 1400;
+
+.authors-section {
+  margin-top: $section-spacing;
+  .inner-authors-section {
+    .section-heading {
+    }
+    .list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      @include rwd($flex-break) {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-reverse;
+  align-items: center;
+  width: 100%;
+  margin-top: $list-item-spacing;
+  @include lg {
+    flex-direction: row;
+    flex-flow: row;
+    align-items: flex-start;
+  }
+  @include rwd($flex-break) {
+    width: 48%;
+  }
+  .img-container {
+    img {
+      // max-width: 100%; //need to work this out :)
+      margin-top: 10px;
+      @include lg {
+        object-fit: cover;
+        width:300px;
+        height:300px;
+        margin-top: 0px;
+        margin-right: 20px;
+      }
+      @include rwd($flex-break) {
+        object-fit: cover;
+        width:250px;
+        height:250px;
+        margin-top: 0px;
+        margin-right: 20px;
+      }
+    }
+  }
+  .text-container {
+    h3 {
+      text-align: left;
+      padding: 0;
+      margin: 0;
+    }
+    p {
+      text-align: left;
+    }
+  }
+}

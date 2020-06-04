@@ -1,0 +1,78 @@
+$header-height: 60px;
+
+header {
+  height: $header-height;
+  width: 100%;
+  background-color: $primary;
+  position: fixed;
+  z-index: 10;
+  .inner-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $header-height;
+    @include md {
+      justify-content: space-between;
+    }
+    .logotype {
+      a {
+        display: none;
+        font-family: $title;
+        font-size: 1.5rem;
+        text-decoration: none;
+        letter-spacing: 5px;
+        color: $white;
+        padding: 2px 0px 0px 5px;
+        &:hover {
+          color: $primary;
+          background-color: $white;
+        }
+        &:active {
+          color: $primary;
+          background-color: $secondary;
+        }
+        @include md {
+          display: block;
+        }
+      }
+    }
+    .navigation {
+      width: 100%;
+      nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        @include md {
+          justify-content: flex-end;
+        }
+        a {
+          font-family: $body;
+          font-size: 0.75rem;
+          font-weight: 500;
+          text-decoration: none;
+          letter-spacing: 1px;
+          color: $white;
+          text-transform: uppercase;
+          padding: 2px 2px 2px 3px;
+          margin: 0px 30px;
+          &:hover {
+            color: $primary;
+            background-color: $white;
+          }
+          &:active {
+            color: $primary;
+            background-color: $secondary;
+          }
+          @include md {
+            &:first-child {
+              display: none;
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

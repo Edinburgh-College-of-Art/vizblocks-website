@@ -1,0 +1,21 @@
+<div class="authors-section">
+  <div class="container">
+    <div class="inner-authors-section">
+      <h2 class="section-heading">The VizBlocks Team</h2>
+      <ul class="list">
+        {% for item in site.authors %}
+          <li class="item">
+            <div class="img-container">
+              <img src="{{ item.image }}"></img>
+            </div>
+            <div class="text-container">
+              <h3>{{ item.name }}</h3>
+              <p class="role"> {{ item.role }}</p>
+              <p class="content">{{ item.content | markdownify }}</p>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

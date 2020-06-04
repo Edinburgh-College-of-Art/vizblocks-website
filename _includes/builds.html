@@ -1,0 +1,35 @@
+<div class="builds-section">
+  <div class="container">
+    <div class="inner-builds-section">
+      <h2 class="section-heading">Built with VizBlocks</h2>
+      <p class="builds-text">
+        {{ site.data.content.builds_text }}
+      </p>
+      <ul class="list">
+        {% for build in site.builds %}
+          <li class="build-item">
+            <div class="img-container">
+              <img src="{{ build.image }}" class="intro-img"></img>
+            </div>
+            <div class="text-container">
+              <h3>{{ build.name }}</h3>
+                <p>by
+                  {% for author in build.authors %}
+                    {% assign penultimate = forloop.length | minus: 1 %}
+                    {% if forloop.index == forloop.length %}
+                      <a href="{{ author.link }}">{{ author.name }}</a>
+                    {% elsif forloop.index == penultimate %}
+                      <a href="{{ author.link }}">{{ author.name }}</a> and
+                    {% else %}
+                      <a href="{{ author.link }}">{{ author.name }}</a>,
+                    {% endif %}
+                  {% endfor %}
+                </p>
+              <p>{{ build.content | markdownify }}</p>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

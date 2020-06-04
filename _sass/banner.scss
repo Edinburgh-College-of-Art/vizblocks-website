@@ -1,0 +1,56 @@
+.banner {
+  position: relative;
+  background-color: $light-grey;
+  img {
+    position: absolute;
+    height: 100vh;
+    min-width: 100vw;
+  }
+  .inner-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .main-text {
+      color: $primary;
+      font-family: $title;
+      font-size: 16vw;
+      letter-spacing: 4vw;
+      font-variation-settings: "wght" 60, "wdth" 100, "opsz" 150;
+      text-align: center;
+      text-transform: uppercase;
+      padding-left: 4vw;
+      margin: $header-height*2 0 0 0;
+      z-index: 9;
+      @include sm {
+        font-size: 14vw;
+      }
+      @include md {
+        font-size: 13vw;
+        letter-spacing: 3vw;
+        padding-left: 3vw;
+      }
+      @include rwd(1600) {
+        font-size: 210px;
+        letter-spacing: 50px;
+      }
+    }
+    .strapline{
+      color: $primary;
+      font-family: $body;
+      font-size: 2rem;
+      text-align: center;
+      margin: 15vh 0 15vh 0;
+      z-index: 9;
+    }
+    .cta-text {
+      color: $primary;
+      font-family: $body;
+      font-size: 1rem;
+      text-align: center;
+      margin: 0;
+      z-index: 9;
+    }
+  }
+}

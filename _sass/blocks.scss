@@ -1,0 +1,86 @@
+$tooltip-size: 300px;
+
+.blocks-section {
+  margin-top: $section-spacing;
+  .inner-blocks-section {
+    .section-heading {
+    }
+    .blocks-text {
+    }
+    .list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.block-item {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-reverse;
+  align-items: center;
+  width: 100%;
+  margin-top: $list-item-spacing;
+  @include lg {
+    flex-direction: row;
+    flex-flow: row;
+    align-items: flex-start;
+  }
+  .img-container {
+    img {
+      max-width: 100%;
+      margin-top: 10px;
+      @include lg {
+        max-width: 400px;
+        margin-top: 0px;
+        margin-right: 20px;
+      }
+    }
+  }
+  .text-container {
+    h3 {
+      padding: 0;
+      margin: 0;
+    }
+    p {
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        p {
+          font-family: $code;
+          font-size: 0.9rem;
+          text-align: left;
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 8px;
+  .tooltip-content {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    width: $tooltip-size;
+    top: 150%;
+    left: 0;
+    @include xl {
+      top: 50%;
+      margin-top: -$tooltip-size/2;
+      left: 103%;
+    }
+  }
+  &:hover {
+    .tooltip-content {
+      visibility: visible;
+    }
+  }
+}

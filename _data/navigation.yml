@@ -1,0 +1,12 @@
+- name: Home
+  link: /
+- name: About
+  link: /about
+- name: Get Started
+  link: /
+- name: Tutorials
+  link: /
+- name: Technical Info
+  link: /
+- name: Contact
+  link: /contact

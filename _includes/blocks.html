@@ -1,0 +1,40 @@
+<div class="blocks-section">
+  <div class="container">
+    <div class="inner-blocks-section">
+      <h2 class="section-heading">What's in the kit?</h2>
+      <p class="blocks-text">
+        {{ site.data.content.blocks_text }}
+      </p>
+      <ul class="list">
+        {% for block in site.blocks %}
+          <li class="block-item">
+            <div class="img-container">
+              <img src="{{ block.image }}" class="intro-img"></img>
+            </div>
+            <div class="text-container">
+            <h3>{{ block.name }}</h3>
+            <p>{{ block.content | markdownify }}</p>
+            {% if block.name == "VizBlocks Server" %}
+            <p>The VizBlocks server is the brain of the kit, <a href="/">click here</a> to find out how to use it in our project.</p>
+            {% else %}
+            <p>Hover over the commands below to preview this block's behaviours:</p>
+            {% endif %}
+            <ul>
+              {% for behaviour in block.behaviours %}
+                <li>
+                  <p class="tooltip">{{ behaviour.name }}
+                    <!-- {% for arg in behaviour.arguments %}
+                     <span>&lt;{{ arg }}&gt;</span>
+                    {% endfor %} -->
+                    <img src="{{ behaviour.tooltip }}" class="tooltip-content">
+                  </p>
+                </li>
+              {% endfor %}
+            </ul>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

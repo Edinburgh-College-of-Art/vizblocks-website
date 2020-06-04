@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
+@font-face {
+  font-family: "Handjet-VF";
+  src: url("../fonts/Handjet-VF.ttf") format("truetype");
+}
+
+// Font:
+$title: "Handjet-VF";
+$body: "Source Sans Pro", sans-serif;
+$code: "Source Code Pro", monospace;
+
+//Colours:
+$white: #f2f2f2;
+$light-grey: #cccccc;
+$dark-grey: #444444;
+$black: #222222;
+$primary: #ff3333;
+$secondary: #ffff99;
+$error: #ff9999;
+
+//Breakpoints:
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+// Tablets and small desktops
+$screen-lg-min: 992px;
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+//Mixins
+// Small devices
+@mixin sm {
+   @media (min-width: #{$screen-sm-min}) {
+       @content;
+   }
+}
+// Medium devices
+@mixin md {
+   @media (min-width: #{$screen-md-min}) {
+       @content;
+   }
+}
+// Large devices
+@mixin lg {
+   @media (min-width: #{$screen-lg-min}) {
+       @content;
+   }
+}
+// Extra large devices
+@mixin xl {
+   @media (min-width: #{$screen-xl-min}) {
+       @content;
+   }
+}
+// Custom devices
+@mixin rwd($screen) {
+   @media (min-width: $screen+'px') {
+       @content;
+   }
+}
+
+//Variables:
+$high-breakpoint: 992px;
+$mid-breakpoint: 992px;
+$low-breakpoint: 992px;
+
+$section-spacing: 60px;
+$list-item-spacing: 40px;
+
+//Root
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: $body;
+  font-size: 16px;
+  background-color: $white;
+  color: $black;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+//Global settings
+.container {
+  // border: solid 1px red;
+  width: 90vw;
+  margin: 0 auto;
+  @include sm {
+    // border: solid 1px orange;
+    width: 80vw;
+  }
+  @include md {
+    // border: solid 1px yellow;
+    width: 70vw;
+  }
+  @include lg {
+    // border: solid 1px green;
+  }
+  @include xl {
+    // border: solid 1px blue;
+  }
+  @include rwd(1600) {
+    // border: solid 1px purple;
+    width: 1600*0.7px;
+  }
+}
+
+.section-heading {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: $primary;
+}
+
+.no-banner {
+  padding-top: 120px;
+  padding-bottom: 20px;
+  text-align: center;
+  // background: pink;
+}

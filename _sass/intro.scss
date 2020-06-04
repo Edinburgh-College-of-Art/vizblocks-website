@@ -1,0 +1,33 @@
+.intro {
+  margin-top: $section-spacing;
+  .inner-intro {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column-reverse;
+    align-items: center;
+    width: 100%;
+    @include lg {
+      flex-direction: row;
+      flex-flow: row;
+      align-items: flex-start;
+    }
+    .img-container {
+      img {
+        max-width: 100%;
+        @include lg {
+          max-width: 400px;
+          margin-right: 20px;
+        }
+      }
+    }
+    .text-container {
+      p {
+        span {
+          a {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
