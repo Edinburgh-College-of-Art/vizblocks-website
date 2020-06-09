@@ -3,6 +3,6 @@ name: Matt Hamilton
 first_name: Matt
 role: Developer
 email: matt.hamilton@ed.ac.uk
-image: https://lh3.googleusercontent.com/proxy/VpWs2S8bg3dRLMBZoYdFE7n7yKION9sHFP-jxz_dFz70oI09znSdESxKUNRmvreHCJiV-2Nv_yFhXkzFGqf-Rd_yRqzRNp3oH4s4JEBL5MkJ9YDGtj_rmwmk
+image: https://media.tarkett-image.com/large/TH_24567081_24594081_24596081_24601081_24563081_24565081_24588081_001.jpg
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.
