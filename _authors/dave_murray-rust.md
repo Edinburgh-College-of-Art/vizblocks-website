@@ -1,5 +1,5 @@
 ---
-name: Dr Dave Murray-Rust
+name: Dave Murray-Rust
 first_name: Dave
 role: Researcher
 email: d.murray-rust@ed.ac.uk

@@ -1,5 +1,5 @@
 ---
-name: Dr Evan Morgan
+name: Evan Morgan
 first_name: Evan
 role: Research Software Engineer
 email: e.morgan@ed.ac.uk
