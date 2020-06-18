@@ -3,3 +3,4 @@ collections:
   builds:
   tutorials:
   authors:
+baseurl: "/vizblocks-website"
