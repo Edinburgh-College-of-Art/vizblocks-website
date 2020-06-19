@@ -91,7 +91,7 @@ header .inner-header .navigation nav a:active { color: #ff3333; background-color
 
 .block-item .text-container ul { list-style-type: none; margin: 0; padding: 0; }
 
-.block-item .text-container ul li p { font-family: "Source Code Pro", monospace; font-size: 0.9rem; text-align: left; color: #ff3333; }
+.block-item .text-container ul li p { font-family: "Source Code Pro", monospace; font-size: 0.9rem; text-align: left; color: #ff3333; cursor: crosshair; }
 
 .tooltip { position: relative; display: inline-block; margin-bottom: 8px; }
 

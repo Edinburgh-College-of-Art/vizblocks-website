@@ -3,10 +3,10 @@
 - name: About
   link: /about
 - name: Get Started
-  link: /
+  link: /tutorials/getting-started
 - name: Tutorials
-  link: /
+  link: /tutorials
 - name: Technical Info
-  link: /
+  link: /docs
 - name: Contact
   link: /contact

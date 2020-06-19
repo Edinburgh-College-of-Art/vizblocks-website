@@ -2,12 +2,12 @@
   <div class="container">
     <div class="inner-header">
       <div class="logotype">
-        <a href="{{site.baseurl}}/">VizBlocks</a>
+        <a href="{{ "/" | prepend: site.baseurl }}">VizBlocks</a>
       </div>
       <div class="navigation">
         <nav>
           {% for item in site.data.navigation %}
-            <a href="{{site.baseurl}}{{ item.link }}">{{ item.name }}</a>
+            <a href="{{ item.link | prepend: site.baseurl }}">{{ item.name }}</a>
           {% endfor %}
         </nav>
       </div>
