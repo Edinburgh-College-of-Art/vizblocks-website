@@ -15,11 +15,11 @@
             {% for item in site.data.partners %}
               {% assign penultimate = forloop.length | minus: 1 %}
               {% if forloop.index == forloop.length %}
-                <a href="{{ item.link }}">{{ item.name }}</a>.
+                <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>.
               {% elsif forloop.index == penultimate %}
-                <a href="{{ item.link }}">{{ item.name }}</a> and
+                <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a> and
               {% else %}
-                <a href="{{ item.link }}">{{ item.name }}</a>,
+                <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>,
               {% endif %}
             {% endfor %}
           </span>
@@ -30,15 +30,18 @@
             {% for item in site.data.funding %}
               {% assign penultimate = forloop.length | minus: 1 %}
               {% if forloop.index == forloop.length %}
-                <a href="{{ item.link }}">{{ item.name }}</a>.
+                <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>.
               {% elsif forloop.index == penultimate %}
-                <a href="{{ item.link }}">{{ item.name }}</a> and
+                <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a> and
               {% else %}
-                <a href="{{ item.link }}">{{ item.name }}</a>,
+                <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>,
               {% endif %}
             {% endfor %}
           </span>
         </p>
+        <div class="tutorial-link">
+          <a href="{{ "/tutorials" | prepend: site.baseurl }}" >Have a go by following our tutorials ↗</a>
+        </div>
       </div>
     </div>
   </div>

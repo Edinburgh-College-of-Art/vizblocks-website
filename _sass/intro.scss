@@ -28,6 +28,12 @@
           }
         }
       }
+      .tutorial-link {
+        margin-bottom: 25px;
+        @include lg {
+          margin-bottom: 0px;
+        }
+      }
     }
   }
 }

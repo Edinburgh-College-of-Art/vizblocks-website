@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="tutorial">
+  <div class="container">
+    <div class="inner-tutorial">
+      <h1 class="no-banner">Tutorial: {{ page.name }}</h1>
+      <h2>Description</h2>
+      <div class="difficulty {{ page.difficulty | downcase }}">{{ page.difficulty }}</div>
+      <p>{{ page.description }}</p>
+      {{ content }}
+    </div>
+  </div>
+</div>

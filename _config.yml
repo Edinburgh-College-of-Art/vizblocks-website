@@ -2,5 +2,14 @@ collections:
   blocks:
   builds:
   tutorials:
+    output: true
   authors:
+
+defaults:
+  - scope:
+      path: ""
+      type: "tutorials"
+    values:
+      layout: "tutorial"
+
 baseurl: "/vizblocks-website"

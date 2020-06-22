@@ -33,6 +33,7 @@ header {
         }
         @include md {
           display: block;
+          margin-left: 30px;
         }
       }
     }
@@ -46,6 +47,7 @@ header {
           justify-content: flex-end;
         }
         a {
+          display: inline;
           font-family: $body;
           font-size: 0.75rem;
           font-weight: 500;
@@ -54,7 +56,10 @@ header {
           color: $white;
           text-transform: uppercase;
           padding: 2px 2px 2px 3px;
-          margin: 0px 30px;
+          margin: 0px 15px;
+          &.start {
+            display: none;
+          }
           &:hover {
             color: $primary;
             background-color: $white;
@@ -64,11 +69,16 @@ header {
             background-color: $secondary;
           }
           @include md {
-            &:first-child {
-              display: none;
+            &.home {
+              // display: none;
             }
             &:last-child {
-              margin-right: 0;
+              margin-right: 30px;
+            }
+          }
+          @include lg {
+            &.start {
+              display: inline-block;
             }
           }
         }

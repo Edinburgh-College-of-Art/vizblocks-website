@@ -61,10 +61,6 @@ $screen-xl-min: 1200px;
 }
 
 //Variables:
-$high-breakpoint: 992px;
-$mid-breakpoint: 992px;
-$low-breakpoint: 992px;
-
 $section-spacing: 60px;
 $list-item-spacing: 40px;
 
@@ -86,6 +82,7 @@ body {
 .container {
   // border: solid 1px red;
   width: 90vw;
+  font-size: 1.5rem;
   margin: 0 auto;
   @include sm {
     // border: solid 1px orange;
@@ -94,9 +91,11 @@ body {
   @include md {
     // border: solid 1px yellow;
     width: 70vw;
+    font-size: 1.25rem;
   }
   @include lg {
     // border: solid 1px green;
+    font-size: 1rem;
   }
   @include xl {
     // border: solid 1px blue;

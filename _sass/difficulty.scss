@@ -1,0 +1,20 @@
+  .difficulty {
+    margin: 0;
+    display: inline-block;
+    padding: 2px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-top: 5px;
+    &.beginner {
+      color: $white;
+      background-color: green;
+    }
+    &.intermediate {
+      color: $white;
+      background-color: orange;
+    }
+    &.advanced {
+      color: $white;
+      background-color: red;
+    }
+  }

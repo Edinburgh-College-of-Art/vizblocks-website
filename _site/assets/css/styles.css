@@ -3,11 +3,13 @@
 
 html, body { max-width: 100%; overflow-x: hidden; font-family: "Source Sans Pro", sans-serif; font-size: 16px; background-color: #f2f2f2; color: #222222; margin: 0; padding: 0; text-align: justify; }
 
-.container { width: 90vw; margin: 0 auto; }
+.container { width: 90vw; font-size: 1.5rem; margin: 0 auto; }
 
 @media (min-width: 576px) { .container { width: 80vw; } }
 
-@media (min-width: 768px) { .container { width: 70vw; } }
+@media (min-width: 768px) { .container { width: 70vw; font-size: 1.25rem; } }
+
+@media (min-width: 992px) { .container { font-size: 1rem; } }
 
 @media (min-width: 1600px) { .container { width: 1120px; } }
 
@@ -29,7 +31,7 @@ header .inner-header .logotype a:hover { color: #ff3333; background-color: #f2f2
 
 header .inner-header .logotype a:active { color: #ff3333; background-color: #ffff99; }
 
-@media (min-width: 768px) { header .inner-header .logotype a { display: block; } }
+@media (min-width: 768px) { header .inner-header .logotype a { display: block; margin-left: 30px; } }
 
 header .inner-header .navigation { width: 100%; }
 
@@ -37,13 +39,17 @@ header .inner-header .navigation nav { width: 100%; display: flex; justify-conte
 
 @media (min-width: 768px) { header .inner-header .navigation nav { justify-content: flex-end; } }
 
-header .inner-header .navigation nav a { font-family: "Source Sans Pro", sans-serif; font-size: 0.75rem; font-weight: 500; text-decoration: none; letter-spacing: 1px; color: #f2f2f2; text-transform: uppercase; padding: 2px 2px 2px 3px; margin: 0px 30px; }
+header .inner-header .navigation nav a { display: inline; font-family: "Source Sans Pro", sans-serif; font-size: 0.75rem; font-weight: 500; text-decoration: none; letter-spacing: 1px; color: #f2f2f2; text-transform: uppercase; padding: 2px 2px 2px 3px; margin: 0px 15px; }
+
+header .inner-header .navigation nav a.start { display: none; }
 
 header .inner-header .navigation nav a:hover { color: #ff3333; background-color: #f2f2f2; }
 
 header .inner-header .navigation nav a:active { color: #ff3333; background-color: #ffff99; }
 
-@media (min-width: 768px) { header .inner-header .navigation nav a:first-child { display: none; } header .inner-header .navigation nav a:last-child { margin-right: 0; } }
+@media (min-width: 768px) { header .inner-header .navigation nav a:last-child { margin-right: 30px; } }
+
+@media (min-width: 992px) { header .inner-header .navigation nav a.start { display: inline-block; } }
 
 .banner { position: relative; background-color: #cccccc; }
 
@@ -74,6 +80,10 @@ header .inner-header .navigation nav a:active { color: #ff3333; background-color
 @media (min-width: 992px) { .intro .inner-intro .img-container img { max-width: 400px; margin-right: 20px; } }
 
 .intro .inner-intro .text-container p span a { color: #ff3333; }
+
+.intro .inner-intro .text-container .tutorial-link { margin-bottom: 25px; }
+
+@media (min-width: 992px) { .intro .inner-intro .text-container .tutorial-link { margin-bottom: 0px; } }
 
 .blocks-section { margin-top: 60px; }
 
@@ -121,7 +131,7 @@ header .inner-header .navigation nav a:active { color: #ff3333; background-color
 
 .contact-button-section { margin-top: 60px; }
 
-.contact-button-section .inner-contact-button-section { width: 100%; display: flex; justify-content: center; }
+.contact-button-section .inner-contact-button-section { width: 100%; display: flex; justify-content: center; font-size: 1rem; }
 
 .contact-button-section .inner-contact-button-section a { width: 150px; padding: 15px; color: #ff3333; background-color: #f2f2f2; border-radius: 25px; border: 2px solid #ff3333; text-align: center; text-decoration: none; }
 
@@ -165,7 +175,7 @@ footer .inner-footer p a:active { color: #ff3333; background-color: #ffff99; }
 
 @media (min-width: 1400px) { .item { width: 48%; } }
 
-.item .img-container img { margin-top: 10px; }
+.item .img-container img { width: 100%; margin-top: 10px; }
 
 @media (min-width: 992px) { .item .img-container img { object-fit: cover; width: 300px; height: 300px; margin-top: 0px; margin-right: 20px; } }
 
@@ -174,5 +184,27 @@ footer .inner-footer p a:active { color: #ff3333; background-color: #ffff99; }
 .item .text-container h3 { text-align: left; padding: 0; margin: 0; }
 
 .item .text-container p { text-align: left; }
+
+.difficulty { margin: 0; display: inline-block; padding: 2px; font-size: 0.8rem; text-transform: uppercase; margin-top: 5px; }
+
+.difficulty.beginner { color: #f2f2f2; background-color: green; }
+
+.difficulty.intermediate { color: #f2f2f2; background-color: orange; }
+
+.difficulty.advanced { color: #f2f2f2; background-color: red; }
+
+.tutorial .inner-tutorial h2 { margin: 0; }
+
+.tutorial .inner-tutorial p { margin-bottom: 15px; }
+
+.tutorial .inner-tutorial ul { padding-left: 16px; }
+
+.tutorial .inner-tutorial ul li { margin-bottom: 5px; }
+
+.tutorial .inner-tutorial ol { padding-left: 16px; }
+
+.tutorial .inner-tutorial ol li { margin-bottom: 15px; }
+
+.tutorial .inner-tutorial img { max-width: 400px; max-height: 400px; }
 
 /*# sourceMappingURL=styles.css.map */

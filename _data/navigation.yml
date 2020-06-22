@@ -1,12 +1,18 @@
 - name: Home
   link: /
+  class: home
 - name: About
   link: /about
+  class: about
 - name: Get Started
-  link: /tutorials/getting-started
+  link: /tutorials/0_getting_started.html
+  class: start
 - name: Tutorials
   link: /tutorials
+  class: tutorials
 - name: Technical Info
   link: /docs
+  class: docs
 - name: Contact
   link: /contact
+  class: content

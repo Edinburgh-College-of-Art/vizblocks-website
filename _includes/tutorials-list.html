@@ -1,0 +1,23 @@
+<div class="authors-section">
+  <div class="container">
+    <div class="inner-authors-section">
+      <ul class="list">
+        {% for item in site.tutorials %}
+          <li class="item tutorial-preview">
+            <div class="img-container">
+              <img src="{{ item.image }}"></img>
+            </div>
+            <div class="text-container">
+              <h3>{{ forloop.index }}. {{ item.name }}</h3>
+              <div class="difficulty {{ item.difficulty | downcase }}">{{ item.difficulty }}</div>
+              <p class="description">{{ item.description }}</p>
+              <p class="link-container">
+                <a href="{{ item.url | prepend: site.baseurl }}">Go to tutorial ↗</a>
+              </p>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

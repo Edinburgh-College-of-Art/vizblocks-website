@@ -1,0 +1,26 @@
+.tutorial {
+  .inner-tutorial {
+    h2 {
+      margin: 0;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    ul {
+      padding-left: 16px;
+      li {
+        margin-bottom: 5px;
+      }
+    }
+    ol {
+      padding-left: 16px;
+      li {
+        margin-bottom: 15px;
+      }
+    }
+    img {
+      max-width: 400px;
+      max-height: 400px;
+    }
+  }
+}

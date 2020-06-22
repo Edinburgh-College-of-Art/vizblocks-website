@@ -36,7 +36,7 @@ $flex-break: 1400;
   }
   .img-container {
     img {
-      // max-width: 100%; //need to work this out :)
+      width: 100%; //need to work this out :)
       margin-top: 10px;
       @include lg {
         object-fit: cover;
