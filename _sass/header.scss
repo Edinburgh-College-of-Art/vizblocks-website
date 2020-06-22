@@ -69,9 +69,6 @@ header {
             background-color: $secondary;
           }
           @include md {
-            &.home {
-              // display: none;
-            }
             &:last-child {
               margin-right: 30px;
             }
