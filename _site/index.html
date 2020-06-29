@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-      <header>
-  <div class="">
+      <header id="header" class="desktop">
+  <div>
     <div class="inner-header">
       <div class="logotype">
         <a href="/vizblocks-website/">VizBlocks</a>
       </div>
-      <div id="navigation" class="desktop">
+      <div class="navigation">
         <button onclick="toggleBurger(this)">
           <i class="fa fa-bars"></i>
         </button>
-        <nav id="menu">
+        <nav id="menu" class="collapse">
           
             <a href="/vizblocks-website/" class="home">Home</a>
           
@@ -37,6 +37,7 @@
     </div>
   </div>
   <script>
+
   const toggleBurger = () => {
     const menu = document.getElementById('menu');
     if (menu.className === "collapse") {
@@ -46,10 +47,10 @@
     }
   }
 
-  var touchDevice = ('ontouchstart' in document.documentElement);
+  const touchDevice = ('ontouchstart' in document.documentElement);
   if (touchDevice) {
-    const navigation = document.getElementById('navigation');
-    navigation.className = "mobile";
+    const header = document.getElementById("header");
+    header.className = "mobile";
   }
 
   </script>
@@ -142,7 +143,7 @@
     <div class="inner-blocks-section">
       <h2 class="section-heading">What's in the kit?</h2>
       <p class="blocks-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.
+        While you can use the VizBlocks system to build your own blocks, we have a number of pre-made blocks to get you started. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.
       </p>
       <ul class="list">
         
@@ -152,7 +153,7 @@
             </div>
             <div class="text-container">
             <h3>LED Ring Block</h3>
-            <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.</p>
+            <p><p>Light up your project with our LED Ring Block. Using the <code class="highlighter-rouge">Breathe</code> behaviour you could make the block glow green when there are city bikes available near your home, or with the <code class="highlighter-rouge">LightSome</code> behaviour, you could use it to count down to your next calendar event.</p>
 </p>
             
             <p class="hide-on-mobile">Hover over the commands below to preview this block's behaviours:</p>
@@ -187,7 +188,7 @@
             </div>
             <div class="text-container">
             <h3>Servo Motor Block</h3>
-            <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.</p>
+            <p><p>Get your project moving with the Servo Motor Block. You could try using the <code class="highlighter-rouge">GoTo</code> behaviour to build a barometer, or maybe the <code class="highlighter-rouge">Wiggle</code> behaviour to jingle a bell every time a space rocket is launched.</p>
 </p>
             
             <p class="hide-on-mobile">Hover over the commands below to preview this block's behaviours:</p>
@@ -222,7 +223,7 @@
             </div>
             <div class="text-container">
             <h3>VizBlocks Server</h3>
-            <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.</p>
+            <p><p>The VizBlocks Server is the brains of the operation. It connects the blocks you have in the world to the data streams you are visualising. See how to get started with it by visiting our tutorials page <a href="/vizblocks-website/tutorials">here</a>.</p>
 </p>
             
             <ul class="hide-on-mobile">

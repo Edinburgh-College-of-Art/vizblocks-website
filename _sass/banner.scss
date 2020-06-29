@@ -31,31 +31,32 @@
     .main-text {
       color: $primary;
       font-family: $title;
-      font-size: 16vw;
-      letter-spacing: 4vw;
+      font-size: 20vw;
+      letter-spacing: 2vw;
       font-variation-settings: "wght" 60, "wdth" 100, "opsz" 150;
       text-align: center;
       text-transform: uppercase;
-      padding-left: 4vw;
+      padding-left: 2vw;
       margin: $header-height*2 0 0 0;
       z-index: 9;
       @include sm {
-        font-size: 14vw;
+        font-size: 20vw;
       }
       @include md {
-        font-size: 13vw;
-        letter-spacing: 3vw;
-        padding-left: 3vw;
+        font-size: 20vw;
+        letter-spacing: 2vw;
+        padding-left: 2vw;
       }
       @include rwd(1600) {
-        font-size: 210px;
+        font-size: 300px;
         letter-spacing: 50px;
       }
     }
     .strapline{
       color: $primary;
+      width: 75%;
       font-family: $body;
-      font-size: 2rem;
+      font-size: 2.5rem;
       text-align: center;
       margin: 15vh 0 15vh 0;
       z-index: 9;
@@ -63,7 +64,7 @@
     .cta-text {
       color: $primary;
       font-family: $body;
-      font-size: 1rem;
+      font-size: 2rem;
       text-align: center;
       margin: 0;
       z-index: 9;

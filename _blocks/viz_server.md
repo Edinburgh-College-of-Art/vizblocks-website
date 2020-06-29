@@ -2,4 +2,4 @@
 name: VizBlocks Server
 image: /assets/images/placeholder.jpg
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.
+The VizBlocks Server is the brains of the operation. It connects the blocks you have in the world to the data streams you are visualising. See how to get started with it by visiting our tutorials page [here]({{"/tutorials" | prepend:site.baseurl}}).

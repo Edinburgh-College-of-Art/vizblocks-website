@@ -17,53 +17,71 @@ html, body { max-width: 100%; overflow-x: hidden; font-family: "Source Sans Pro"
 
 a { color: #ff3333; }
 
-.no-banner { padding-top: 120px; padding-bottom: 20px; text-align: center; }
+code { font-family: "Source Code Pro", monospace; font-weight: 500; padding: 0 2px; }
 
-header { height: 60px; width: 100%; background-color: #ff3333; position: fixed; z-index: 10; }
+#no-banner { padding-top: 120px; padding-bottom: 20px; text-align: center; }
 
-header .inner-header { display: flex; justify-content: center; align-items: center; height: 60px; }
+#no-banner.mobile { padding-top: 250px; }
 
-@media (min-width: 768px) { header .inner-header { justify-content: space-between; } }
+#header.desktop { height: 60px; width: 100%; background-color: #ff3333; position: fixed; z-index: 10; }
 
-header .inner-header .logotype a { display: none; font-family: "Handjet-VF"; font-size: 1.5rem; text-decoration: none; letter-spacing: 5px; color: #f2f2f2; padding: 2px 0px 0px 5px; }
+#header.desktop .inner-header { display: flex; justify-content: center; align-items: center; height: 60px; }
 
-header .inner-header .logotype a:hover { color: #ff3333; background-color: #f2f2f2; }
+@media (min-width: 768px) { #header.desktop .inner-header { justify-content: space-between; } }
 
-header .inner-header .logotype a:active { color: #ff3333; background-color: #ffff99; }
+#header.desktop .inner-header .logotype a { display: none; font-family: "Handjet-VF"; font-size: 1.5rem; text-decoration: none; letter-spacing: 5px; color: #f2f2f2; padding: 2px 0px 0px 5px; }
 
-@media (min-width: 768px) { header .inner-header .logotype a { display: block; margin-left: 30px; } }
+#header.desktop .inner-header .logotype a:hover { color: #ff3333; background-color: #f2f2f2; }
 
-header .inner-header #navigation.desktop button { display: none; }
+#header.desktop .inner-header .logotype a:active { color: #ff3333; background-color: #ffff99; }
 
-header .inner-header #navigation.desktop nav { width: 100%; display: flex; justify-content: center; }
+@media (min-width: 768px) { #header.desktop .inner-header .logotype a { display: block; margin-left: 30px; } }
 
-@media (min-width: 768px) { header .inner-header #navigation.desktop nav { justify-content: flex-end; } }
+#header.desktop .inner-header .navigation button { display: none; }
 
-header .inner-header #navigation.desktop nav a { display: inline; font-family: "Source Sans Pro", sans-serif; font-size: 0.75rem; font-weight: 500; text-decoration: none; letter-spacing: 1px; color: #f2f2f2; text-transform: uppercase; padding: 2px 2px 2px 3px; margin: 0px 15px; }
+#header.desktop .inner-header .navigation nav { width: 100%; display: flex; justify-content: center; }
 
-header .inner-header #navigation.desktop nav a.start { display: none; }
+@media (min-width: 768px) { #header.desktop .inner-header .navigation nav { justify-content: flex-end; } }
 
-header .inner-header #navigation.desktop nav a:hover { color: #ff3333; background-color: #f2f2f2; }
+#header.desktop .inner-header .navigation nav a { display: inline; font-family: "Source Sans Pro", sans-serif; font-weight: 500; font-size: 0.9rem; text-decoration: none; letter-spacing: 1px; color: #f2f2f2; text-transform: uppercase; padding: 2px 2px 2px 3px; margin: 0px 15px; }
 
-header .inner-header #navigation.desktop nav a:active { color: #ff3333; background-color: #ffff99; }
+#header.desktop .inner-header .navigation nav a.start { display: none; }
 
-@media (min-width: 768px) { header .inner-header #navigation.desktop nav a:last-child { margin-right: 30px; } }
+#header.desktop .inner-header .navigation nav a:hover { color: #ff3333; background-color: #f2f2f2; }
 
-@media (min-width: 992px) { header .inner-header #navigation.desktop nav a.start { display: inline-block; } }
+#header.desktop .inner-header .navigation nav a:active { color: #ff3333; background-color: #ffff99; }
 
-header .inner-header #navigation.mobile { width: 100%; text-align: right; }
+@media (min-width: 768px) { #header.desktop .inner-header .navigation nav a:last-child { margin-right: 30px; } }
 
-header .inner-header #navigation.mobile button { width: 45px; height: 45px; margin-right: 8px; color: #f2f2f2; background-color: #ff3333; border: none; }
+@media (min-width: 992px) { #header.desktop .inner-header .navigation nav a.start { display: inline-block; } }
 
-header .inner-header #navigation.mobile button i { font-size: 2.5rem; }
+#header.mobile { height: 180px; width: 100%; background-color: #ff3333; position: fixed; z-index: 10; }
 
-header .inner-header #navigation.mobile nav { width: 100%; height: 80vh; position: absolute; background-color: #ff3333; display: flex; flex-direction: column; justify-content: space-around; align-items: center; top: 100%; }
+#header.mobile .inner-header { display: flex; justify-content: space-between; align-items: center; height: 180px; }
 
-header .inner-header #navigation.mobile nav a { display: inline; font-family: "Source Sans Pro", sans-serif; font-size: 2rem; font-weight: 500; text-decoration: none; letter-spacing: 1px; color: #f2f2f2; text-transform: uppercase; padding: 15px; }
+#header.mobile .inner-header .logotype a { margin-left: 30px; font-family: "Handjet-VF"; font-size: 5rem; text-decoration: none; letter-spacing: 5px; color: #f2f2f2; padding: 10px 10px 0px 15px; }
 
-header .inner-header #navigation.mobile nav a:last-child { margin-bottom: 60px; }
+#header.mobile .inner-header .logotype a:hover { color: #ff3333; background-color: #f2f2f2; }
 
-header .inner-header #navigation.mobile nav.collapse { display: none; }
+#header.mobile .inner-header .logotype a:active { color: #ff3333; background-color: #ffff99; }
+
+#header.mobile .inner-header .navigation { text-align: right; }
+
+#header.mobile .inner-header .navigation button { width: 150px; height: 150px; margin-right: 30px; color: #f2f2f2; background-color: #ff3333; border: none; }
+
+#header.mobile .inner-header .navigation button:active { color: #ff3333; background-color: #ffff99; }
+
+#header.mobile .inner-header .navigation button i { font-size: 6rem; }
+
+#header.mobile .inner-header .navigation nav { width: 100%; height: 80vh; position: absolute; background-color: #ff3333; display: flex; flex-direction: column; justify-content: space-around; align-items: center; top: 99%; left: 0; }
+
+#header.mobile .inner-header .navigation nav a { display: inline; font-family: "Source Sans Pro", sans-serif; font-size: 4rem; font-weight: 500; text-decoration: none; letter-spacing: 1px; color: #f2f2f2; text-transform: uppercase; padding: 15px; }
+
+#header.mobile .inner-header .navigation nav a:active { color: #ff3333; background-color: #ffff99; }
+
+#header.mobile .inner-header .navigation nav a:last-child { margin-bottom: 60px; }
+
+#header.mobile .inner-header .navigation nav.collapse { display: none; }
 
 .banner { position: relative; background-color: #cccccc; }
 
@@ -73,17 +91,17 @@ header .inner-header #navigation.mobile nav.collapse { display: none; }
 
 .banner .inner-banner { position: absolute; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; width: 100%; top: 0; left: 0; }
 
-.banner .inner-banner .main-text { color: #ff3333; font-family: "Handjet-VF"; font-size: 16vw; letter-spacing: 4vw; font-variation-settings: "wght" 60, "wdth" 100, "opsz" 150; text-align: center; text-transform: uppercase; padding-left: 4vw; margin: 120px 0 0 0; z-index: 9; }
+.banner .inner-banner .main-text { color: #ff3333; font-family: "Handjet-VF"; font-size: 20vw; letter-spacing: 2vw; font-variation-settings: "wght" 60, "wdth" 100, "opsz" 150; text-align: center; text-transform: uppercase; padding-left: 2vw; margin: 120px 0 0 0; z-index: 9; }
 
-@media (min-width: 576px) { .banner .inner-banner .main-text { font-size: 14vw; } }
+@media (min-width: 576px) { .banner .inner-banner .main-text { font-size: 20vw; } }
 
-@media (min-width: 768px) { .banner .inner-banner .main-text { font-size: 13vw; letter-spacing: 3vw; padding-left: 3vw; } }
+@media (min-width: 768px) { .banner .inner-banner .main-text { font-size: 20vw; letter-spacing: 2vw; padding-left: 2vw; } }
 
-@media (min-width: 1600px) { .banner .inner-banner .main-text { font-size: 210px; letter-spacing: 50px; } }
+@media (min-width: 1600px) { .banner .inner-banner .main-text { font-size: 300px; letter-spacing: 50px; } }
 
-.banner .inner-banner .strapline { color: #ff3333; font-family: "Source Sans Pro", sans-serif; font-size: 2rem; text-align: center; margin: 15vh 0 15vh 0; z-index: 9; }
+.banner .inner-banner .strapline { color: #ff3333; width: 75%; font-family: "Source Sans Pro", sans-serif; font-size: 2.5rem; text-align: center; margin: 15vh 0 15vh 0; z-index: 9; }
 
-.banner .inner-banner .cta-text { color: #ff3333; font-family: "Source Sans Pro", sans-serif; font-size: 1rem; text-align: center; margin: 0; z-index: 9; }
+.banner .inner-banner .cta-text { color: #ff3333; font-family: "Source Sans Pro", sans-serif; font-size: 2rem; text-align: center; margin: 0; z-index: 9; }
 
 .intro { margin-top: 80px; }
 
@@ -151,9 +169,9 @@ header .inner-header #navigation.mobile nav.collapse { display: none; }
 
 .contact-button-section { margin: 80px 0; }
 
-.contact-button-section .inner-contact-button-section { width: 100%; display: flex; justify-content: center; font-size: 1rem; }
+.contact-button-section .inner-contact-button-section { width: 100%; display: flex; justify-content: center; font-size: 2rem; }
 
-.contact-button-section .inner-contact-button-section a { transform: scale(1.5); width: 150px; padding: 15px; color: #ff3333; background-color: #f2f2f2; border-radius: 25px; border: 2px solid #ff3333; text-align: center; text-decoration: none; }
+.contact-button-section .inner-contact-button-section a { width: 500px; padding: 15px; color: #ff3333; background-color: #f2f2f2; border-radius: 25px; border: 2px solid #ff3333; text-align: center; text-decoration: none; }
 
 .contact-button-section .inner-contact-button-section a:hover { color: #f2f2f2; background-color: #ff3333; }
 
@@ -161,13 +179,11 @@ header .inner-header #navigation.mobile nav.collapse { display: none; }
 
 .contact-button-section .inner-contact-button-section a div:first-child { margin-bottom: 5px; }
 
-@media (min-width: 992px) { .contact-button-section .inner-contact-button-section a { transform: scale(1); } }
-
 footer { margin-top: 60px; height: 60px; width: 100%; background-color: #ff3333; z-index: 10; }
 
 footer .inner-footer { display: flex; align-items: center; height: 60px; justify-content: center; }
 
-footer .inner-footer p { font-size: 0.75rem; color: #f2f2f2; }
+footer .inner-footer p { font-size: 1rem; color: #f2f2f2; }
 
 footer .inner-footer p a { color: #f2f2f2; padding: 0px 1px 1px 1px; }
 

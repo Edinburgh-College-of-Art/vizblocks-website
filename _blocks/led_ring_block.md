@@ -23,4 +23,4 @@ behaviours:
    tooltip: /assets/images/breathe.gif
 image: /assets/images/led_ring_block.png
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.
+Light up your project with our LED Ring Block. Using the `Breathe` behaviour you could make the block glow green when there are city bikes available near your home, or with the `LightSome` behaviour, you could use it to count down to your next calendar event.

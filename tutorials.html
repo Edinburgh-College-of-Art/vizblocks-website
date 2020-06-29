@@ -12,10 +12,16 @@ h1: Tutorials
   </head>
   <body>
     <div class="container">
-      <h1 class="no-banner">{{ page.h1 }}</h1>
+      <h1 id="no-banner" class="desktop">{{ page.h1 }}</h1>
     </div>
     {% include tutorials-list.html %}
     {% include contact-button.html %}
     {% include footer.html %}
   </body>
+  <script>
+    if (touchDevice) {
+      const element = document.getElementById("no-banner");
+      element.className = "mobile";
+    }
+  </script>
 </html>

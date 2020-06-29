@@ -16,4 +16,4 @@ behaviours:
    tooltip: /assets/images/placeholder.jpg
 image: /assets/images/servo_block.png
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.
+Get your project moving with the Servo Motor Block. You could try using the `GoTo` behaviour to build a barometer, or maybe the `Wiggle` behaviour to jingle a bell every time a space rocket is launched.

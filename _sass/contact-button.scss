@@ -4,10 +4,9 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 2rem;
     a {
-      transform: scale(1.5);
-      width: 150px;
+      width: 500px;
       padding: 15px;
       color: $primary;
       background-color: $white;
@@ -25,9 +24,6 @@
       }
       div:first-child {
         margin-bottom: 5px;
-      }
-      @include lg {
-        transform: scale(1);
       }
     }
   }
