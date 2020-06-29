@@ -61,7 +61,7 @@ $screen-xl-min: 1200px;
 }
 
 //Variables:
-$section-spacing: 60px;
+$section-spacing: 80px;
 $list-item-spacing: 40px;
 
 //Root
@@ -82,20 +82,20 @@ body {
 .container {
   // border: solid 1px red;
   width: 90vw;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0 auto;
   @include sm {
     // border: solid 1px orange;
-    width: 80vw;
+    width: 90vw;
   }
   @include md {
     // border: solid 1px yellow;
-    width: 70vw;
+    width: 80vw;
     font-size: 2rem;
   }
   @include lg {
     // border: solid 1px green;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   @include xl {
     // border: solid 1px blue;

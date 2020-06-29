@@ -5,6 +5,7 @@
     <title>VizBlocks</title>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href=/vizblocks-website/assets/css/styles.css>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
       <header>
@@ -13,8 +14,11 @@
       <div class="logotype">
         <a href="/vizblocks-website/">VizBlocks</a>
       </div>
-      <div class="navigation">
-        <nav>
+      <div id="navigation" class="desktop">
+        <button onclick="toggleBurger(this)">
+          <i class="fa fa-bars"></i>
+        </button>
+        <nav id="menu">
           
             <a href="/vizblocks-website/" class="home">Home</a>
           
@@ -32,6 +36,23 @@
       </div>
     </div>
   </div>
+  <script>
+  const toggleBurger = () => {
+    const menu = document.getElementById('menu');
+    if (menu.className === "collapse") {
+      menu.className = "extend";
+    } else {
+      menu.className = "collapse";
+    }
+  }
+
+  var touchDevice = ('ontouchstart' in document.documentElement);
+  if (touchDevice) {
+    const navigation = document.getElementById('navigation');
+    navigation.className = "mobile";
+  }
+
+  </script>
 </header>
 
       <div class="content">
@@ -52,44 +73,49 @@
         <img src="/vizblocks-website/assets/images/stack.png" class="intro-img"></img>
       </div>
       <div class="text-container">
-      <h2 class="section-heading">What is VizBlocks?</h2>
-        <p class="intro-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.
-        </p>
-        <p class="partner-text">
-          VizBlocks is a project by The Centre for Design Informatics at The University of Edinburgh, in partnership with
-          <span>
-            
+        <div class="upper">
+          <h2 class="section-heading">What is VizBlocks?</h2>
+            <p class="intro-text">
+              VizBlocks is a dynamic data visualisation kit which offers public audiences new ways of physically representing data using a modular kit. With a range of materials, mechanisms and tools, VizBlocks can be used to translate data into playful and engaging physical data displays.
+            </p>
+        </div>
+        <div class="lower">
+          <p class="partner-text">
+            VizBlocks is a project by The Centre for Design Informatics at The University of Edinburgh.
+            <!-- <span>
+              in partnership with
               
+                
+                
+                  <a href="/" target="_blank" rel="noopener noreferrer">Partner 1</a>,
+                
               
-                <a href="/" target="_blank" rel="noopener noreferrer">Partner 1</a>,
+                
+                
+                  <a href="/" target="_blank" rel="noopener noreferrer">Partner 2</a> and
+                
               
-            
+                
+                
+                  <a href="/" target="_blank" rel="noopener noreferrer">Partner 3</a>.
+                
               
+            </span> -->
+          </p>
+          <p class="funding-text">
+            The project was funded by
+            <span>
               
-                <a href="/" target="_blank" rel="noopener noreferrer">Partner 2</a> and
+                
+                
+                  <a href="https://efi.ed.ac.uk/" target="_blank" rel="noopener noreferrer">Edinburgh Futures Institute</a>.
+                
               
-            
-              
-              
-                <a href="/" target="_blank" rel="noopener noreferrer">Partner 3</a>.
-              
-            
-          </span>
-        </p>
-        <p class="funding-text">
-          The project was funded by
-          <span>
-            
-              
-              
-                <a href="https://efi.ed.ac.uk/" target="_blank" rel="noopener noreferrer">Edinburgh Futures Institute</a>.
-              
-            
-          </span>
-        </p>
-        <div class="tutorial-link">
-          <a href="/vizblocks-website/tutorials" >Have a go by following our tutorials ↗</a>
+            </span>
+          </p>
+          <div class="tutorial-link">
+            <a href="/vizblocks-website/tutorials" >Have a go by following our tutorials</a>
+          </div>
         </div>
       </div>
     </div>
@@ -145,7 +171,7 @@
             <div class="text-container">
               <h3>Joe Revans</h3>
               <p class="role"> Developer</p>
-              <p class="content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.</p>
+              <p class="content"><p>Joe is a creative technologist with a background in product design. He likes interdisciplinary design and robots (the cuter the better).</p>
 </p>
             </div>
           </li>

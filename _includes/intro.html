@@ -5,42 +5,47 @@
         <img src="{{ "/assets/images/stack.png" | prepend: site.baseurl }}" class="intro-img"></img>
       </div>
       <div class="text-container">
-      <h2 class="section-heading">What is VizBlocks?</h2>
-        <p class="intro-text">
-          {{ site.data.content.intro_text }}
-        </p>
-        <p class="partner-text">
-          VizBlocks is a project by The Centre for Design Informatics at The University of Edinburgh, in partnership with
-          <span>
-            {% for item in site.data.partners %}
-              {% assign penultimate = forloop.length | minus: 1 %}
-              {% if forloop.index == forloop.length %}
-                <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>.
-              {% elsif forloop.index == penultimate %}
-                <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a> and
-              {% else %}
-                <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>,
-              {% endif %}
-            {% endfor %}
-          </span>
-        </p>
-        <p class="funding-text">
-          The project was funded by
-          <span>
-            {% for item in site.data.funding %}
-              {% assign penultimate = forloop.length | minus: 1 %}
-              {% if forloop.index == forloop.length %}
-                <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>.
-              {% elsif forloop.index == penultimate %}
-                <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a> and
-              {% else %}
-                <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>,
-              {% endif %}
-            {% endfor %}
-          </span>
-        </p>
-        <div class="tutorial-link">
-          <a href="{{ "/tutorials" | prepend: site.baseurl }}" >Have a go by following our tutorials ↗</a>
+        <div class="upper">
+          <h2 class="section-heading">What is VizBlocks?</h2>
+            <p class="intro-text">
+              {{ site.data.content.intro_text }}
+            </p>
+        </div>
+        <div class="lower">
+          <p class="partner-text">
+            VizBlocks is a project by The Centre for Design Informatics at The University of Edinburgh.
+            <!-- <span>
+              in partnership with
+              {% for item in site.data.partners %}
+                {% assign penultimate = forloop.length | minus: 1 %}
+                {% if forloop.index == forloop.length %}
+                  <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>.
+                {% elsif forloop.index == penultimate %}
+                  <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a> and
+                {% else %}
+                  <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>,
+                {% endif %}
+              {% endfor %}
+            </span> -->
+          </p>
+          <p class="funding-text">
+            The project was funded by
+            <span>
+              {% for item in site.data.funding %}
+                {% assign penultimate = forloop.length | minus: 1 %}
+                {% if forloop.index == forloop.length %}
+                  <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>.
+                {% elsif forloop.index == penultimate %}
+                  <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a> and
+                {% else %}
+                  <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>,
+                {% endif %}
+              {% endfor %}
+            </span>
+          </p>
+          <div class="tutorial-link">
+            <a href="{{ "/tutorials" | prepend: site.baseurl }}" >Have a go by following our tutorials</a>
+          </div>
         </div>
       </div>
     </div>

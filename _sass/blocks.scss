@@ -52,7 +52,7 @@ $tooltip-size: 300px;
       li {
         p {
           font-family: $code;
-          font-size: 0.9rem;
+          font-size: 1rem;
           text-align: left;
           color: $primary;
           cursor: crosshair;
@@ -76,12 +76,19 @@ $tooltip-size: 300px;
     @include xl {
       top: 50%;
       margin-top: -$tooltip-size/2;
-      left: 103%;
+      left: 105%;
     }
   }
   &:hover {
     .tooltip-content {
       visibility: visible;
     }
+  }
+}
+
+.hide-on-mobile {
+  display: none;
+  @include lg {
+    display: block;
   }
 }

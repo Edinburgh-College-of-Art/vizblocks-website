@@ -14,12 +14,10 @@
             <div class="text-container">
             <h3>{{ block.name }}</h3>
             <p>{{ block.content | markdownify }}</p>
-            {% if block.name == "VizBlocks Server" %}
-            <p>The VizBlocks server is the brain of the kit, <a href="/">click here</a> to find out how to use it in our project.</p>
-            {% else %}
-            <p>Hover over the commands below to preview this block's behaviours:</p>
+            {% if block.name != "VizBlocks Server" %}
+            <p class="hide-on-mobile">Hover over the commands below to preview this block's behaviours:</p>
             {% endif %}
-            <ul>
+            <ul class="hide-on-mobile">
               {% for behaviour in block.behaviours %}
                 <li>
                   <p class="tooltip">{{ behaviour.name }}

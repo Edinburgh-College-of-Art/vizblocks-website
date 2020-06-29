@@ -1,11 +1,12 @@
 .contact-button-section {
-  margin-top: $section-spacing;
+  margin: $section-spacing 0;
   .inner-contact-button-section {
     width: 100%;
     display: flex;
     justify-content: center;
     font-size: 1rem;
     a {
+      transform: scale(1.5);
       width: 150px;
       padding: 15px;
       color: $primary;
@@ -24,6 +25,9 @@
       }
       div:first-child {
         margin-bottom: 5px;
+      }
+      @include lg {
+        transform: scale(1);
       }
     }
   }

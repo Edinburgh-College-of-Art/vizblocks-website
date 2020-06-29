@@ -1,4 +1,4 @@
-- name: Email
-  link: mailto:designinformatics@ed.ac.uk?subject=VizBlocks Enquiry
-- name: Design Informatics Website
+- name: designinformatics.org
   link: https://www.designinformatics.org/
+- name: designinformatics@ed.ac.uk
+  link: mailto:designinformatics@ed.ac.uk?subject=VizBlocks Enquiry

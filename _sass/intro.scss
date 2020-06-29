@@ -21,12 +21,12 @@
       }
     }
     .text-container {
-      p {
-        span {
-          a {
-            color: $primary;
-          }
-        }
+      @include lg {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        align-items: flex-start;
+        justify-content: space-between;
       }
       .tutorial-link {
         margin-bottom: 25px;

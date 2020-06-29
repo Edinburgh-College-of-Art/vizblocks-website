@@ -5,6 +5,7 @@
     <title>2_custom_behaviours</title>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href=/vizblocks-website/assets/css/styles.css>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
       <header>
@@ -13,8 +14,11 @@
       <div class="logotype">
         <a href="/vizblocks-website/">VizBlocks</a>
       </div>
-      <div class="navigation">
-        <nav>
+      <div id="navigation" class="desktop">
+        <button onclick="toggleBurger(this)">
+          <i class="fa fa-bars"></i>
+        </button>
+        <nav id="menu">
           
             <a href="/vizblocks-website/" class="home">Home</a>
           
@@ -32,6 +36,23 @@
       </div>
     </div>
   </div>
+  <script>
+  const toggleBurger = () => {
+    const menu = document.getElementById('menu');
+    if (menu.className === "collapse") {
+      menu.className = "extend";
+    } else {
+      menu.className = "collapse";
+    }
+  }
+
+  var touchDevice = ('ontouchstart' in document.documentElement);
+  if (touchDevice) {
+    const navigation = document.getElementById('navigation');
+    navigation.className = "mobile";
+  }
+
+  </script>
 </header>
 
       <div class="content">

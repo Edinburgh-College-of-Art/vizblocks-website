@@ -5,4 +5,4 @@ role: Developer
 email: joe.revans@ed.ac.uk
 image: assets/images/joe.jpg
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.
+Joe is a creative technologist with a background in product design. He likes interdisciplinary design and robots (the cuter the better).
