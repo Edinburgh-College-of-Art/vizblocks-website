@@ -2,10 +2,19 @@
   <div class="container">
     <div class="inner-system-section">
       <h2 class="section-heading">The VizBlocks system</h2>
-      <p class="builds-text">
+      <p class="system-text">
         {{ site.data.content.system_text }}
       </p>
-      <img src="{{ "/assets/images/placeholder.jpg" | prepend: site.baseurl }}" class="system-img"></img>
+      <div id="overview-container" class="desktop">
+        <img id="desktop-overview" src="{{ "/assets/images/overview_horizontal.png" | prepend: site.baseurl }}"></img>
+        <img id="mobile-overview" src="{{ "/assets/images/overview_vertical.png" | prepend: site.baseurl }}"></img>
+      </div>
     </div>
   </div>
+  <script>
+    if (touchDevice) {
+      const element = document.getElementById("overview-container");
+      element.className = "mobile";
+    }
+  </script>
 </div>

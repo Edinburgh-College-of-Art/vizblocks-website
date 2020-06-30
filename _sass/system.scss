@@ -1,12 +1,29 @@
 .system-section {
   margin-top: $section-spacing;
   .inner-system-section {
+    width: 100%;
     h2 {
     }
     p {
     }
-    img {
-      max-width: 100%
+    #overview-container {
+      img {
+        width: 100%
+      }
+      &.desktop {
+        img {
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+      &.mobile {
+        img {
+          &:first-child {
+            display: none;
+          }
+        }
+      }
     }
   }
 }

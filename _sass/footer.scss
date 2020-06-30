@@ -1,4 +1,4 @@
-$footer-height: 60px;
+$footer-height: 120px;
 
 footer {
   margin-top: $footer-height;
@@ -7,11 +7,11 @@ footer {
   background-color: $primary;
   z-index: 10;
   .inner-footer {
-    display: flex;
-    align-items: center;
+    text-align: center;
     height: $header-height;
-    justify-content: center;
     p {
+      margin: 0;
+      padding-top: 25px;
       font-size: 1rem;
       color: $white;
         a {

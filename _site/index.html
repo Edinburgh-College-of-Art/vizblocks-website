@@ -241,12 +241,21 @@
   <div class="container">
     <div class="inner-system-section">
       <h2 class="section-heading">The VizBlocks system</h2>
-      <p class="builds-text">
+      <p class="system-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.
       </p>
-      <img src="/vizblocks-website/assets/images/placeholder.jpg" class="system-img"></img>
+      <div id="overview-container" class="desktop">
+        <img id="desktop-overview" src="/vizblocks-website/assets/images/overview_horizontal.png"></img>
+        <img id="mobile-overview" src="/vizblocks-website/assets/images/overview_vertical.png"></img>
+      </div>
     </div>
   </div>
+  <script>
+    if (touchDevice) {
+      const element = document.getElementById("overview-container");
+      element.className = "mobile";
+    }
+  </script>
 </div>
 
     <!-- <div class="builds-section">
@@ -346,6 +355,9 @@
       <div class="inner-footer">
         <p>
           VizBlocks is a project by <a href="https://www.designinformatics.org/">The Centre For Design Informatics</a>.
+        </p>
+        <p>
+        Site icons by <a href="http://fontawesome.io/">Font Awesome</a>.
         </p>
       </div>
     </div>
