@@ -9,7 +9,7 @@
         {% for block in site.blocks %}
           <li class="block-item">
             <div class="img-container">
-              <img src="{{ block.image | prepend: site.baseurl }}" class="intro-img"></img>
+              <img src="{{ block.image | prepend: site.baseurl }}" class="intro-img" alt="{{ block.image_alt }}"></img>
             </div>
             <div class="text-container">
             <h3>{{ block.name }}</h3>
@@ -21,7 +21,7 @@
               {% for behaviour in block.behaviours %}
                 <li>
                   <p class="tooltip">{{ behaviour.name }}
-                    <img src="{{ behaviour.tooltip | prepend: site.baseurl }}" class="tooltip-content">
+                    <img src="{{ behaviour.tooltip | prepend: site.baseurl }}" class="tooltip-content" alt="{{ behaviour.tooltip_alt }}">
                   </p>
                 </li>
               {% endfor %}

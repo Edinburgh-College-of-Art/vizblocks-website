@@ -9,7 +9,7 @@
         {% for build in site.builds %}
           <li class="build-item">
             <div class="img-container">
-              <img src="{{ build.image }}" class="intro-img"></img>
+              <img src="{{ build.image }}" class="intro-img" alt="{{ build.image_alt }}"></img>
             </div>
             <div class="text-container">
               <h3>{{ build.name }}</h3>

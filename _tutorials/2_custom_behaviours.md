@@ -3,6 +3,7 @@ name: Custom Behaviours
 difficulty: Advanced
 description: This is the short description of the project that will appear at the top of the tutorial, and on the page listing all available tutorials.
 image: https://media.tarkett-image.com/large/TH_24567081_24594081_24596081_24601081_24563081_24565081_24588081_001.jpg
+image_alt: 
 ---
 ## You Will Need:
 - Server Block

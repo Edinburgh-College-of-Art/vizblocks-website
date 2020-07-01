@@ -2,10 +2,10 @@
   <div>
     <div class="inner-header">
       <div class="logotype">
-        <a href="{{ "/" | prepend: site.baseurl }}">VizBlocks</a>
+        <a href="{{ "/" | prepend: site.baseurl }}" aria-hidden="true" title="Site home">VizBlocks</a>
       </div>
       <div class="navigation">
-        <button onclick="toggleBurger(this)">
+        <button onclick="toggleBurger()" type="button" aria-label="toggle burger menu">
           <i class="fa fa-bars"></i>
         </button>
         <nav id="menu" class="collapse">

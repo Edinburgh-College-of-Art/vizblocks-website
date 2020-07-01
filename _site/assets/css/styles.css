@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
 @font-face { font-family: "Handjet-VF"; src: url("../fonts/Handjet-VF.ttf") format("truetype"); }
 
-html, body { max-width: 100%; overflow-x: hidden; font-family: "Source Sans Pro", sans-serif; font-size: 16px; background-color: #f2f2f2; color: #222222; margin: 0; padding: 0; text-align: justify; }
+html, body { max-width: 100%; overflow-x: hidden; font-family: "Source Sans Pro", sans-serif; font-size: 16px; background-color: #f2f2f2; color: #222222; margin: 0; padding: 0; text-align: left; }
 
 .container { width: 90vw; font-size: 2rem; margin: 0 auto; }
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>VizBlocks</title>
@@ -12,10 +12,10 @@
   <div>
     <div class="inner-header">
       <div class="logotype">
-        <a href="/vizblocks-website/">VizBlocks</a>
+        <a href="/vizblocks-website/" aria-hidden="true" title="Site home">VizBlocks</a>
       </div>
       <div class="navigation">
-        <button onclick="toggleBurger(this)">
+        <button onclick="toggleBurger()" type="button" aria-label="toggle burger menu">
           <i class="fa fa-bars"></i>
         </button>
         <nav id="menu" class="collapse">
@@ -66,7 +66,7 @@
   <body>
     <div class="banner">
   <div class="img-container">
-    <img src="/vizblocks-website/assets/images/feather.gif">
+    <img src="/vizblocks-website/assets/images/feather.gif" alt="Animated image of a servo block wiggling a green feather.">
   </div>
   <div class="container">
     <div class="inner-banner">
@@ -86,7 +86,7 @@
   <div class="container">
     <div class="inner-intro">
       <div class="img-container">
-        <img src="/vizblocks-website/assets/images/stack.png" class="intro-img"></img>
+        <img src="/vizblocks-website/assets/images/stack.png" class="intro-img" alt="Three VizBlocks stacked in a triangle."></img>
       </div>
       <div class="text-container">
         <div class="upper">
@@ -149,7 +149,7 @@
         
           <li class="block-item">
             <div class="img-container">
-              <img src="/vizblocks-website/assets/images/led_ring_block.png" class="intro-img"></img>
+              <img src="/vizblocks-website/assets/images/led_ring_block.png" class="intro-img" alt="LED ring block, illuminated in pink."></img>
             </div>
             <div class="text-container">
             <h3>LED Ring Block</h3>
@@ -162,19 +162,19 @@
               
                 <li>
                   <p class="tooltip">LightAll
-                    <img src="/vizblocks-website/assets/images/lightall.gif" class="tooltip-content">
+                    <img src="/vizblocks-website/assets/images/lightall.gif" class="tooltip-content" alt="Block lighting up all of its LEDs in different colours.">
                   </p>
                 </li>
               
                 <li>
                   <p class="tooltip">LightSome
-                    <img src="/vizblocks-website/assets/images/lightsome.gif" class="tooltip-content">
+                    <img src="/vizblocks-website/assets/images/lightsome.gif" class="tooltip-content" alt="Block lighting up varying numbers of its LEDs in different colours.">
                   </p>
                 </li>
               
                 <li>
                   <p class="tooltip">Breathe
-                    <img src="/vizblocks-website/assets/images/breathe.gif" class="tooltip-content">
+                    <img src="/vizblocks-website/assets/images/breathe.gif" class="tooltip-content" alt="Block brightening and dimming its LEDs on a cycle.">
                   </p>
                 </li>
               
@@ -184,7 +184,7 @@
         
           <li class="block-item">
             <div class="img-container">
-              <img src="/vizblocks-website/assets/images/servo_block.png" class="intro-img"></img>
+              <img src="/vizblocks-website/assets/images/servo_block.png" class="intro-img" alt="Servo block with a feather attached as a pointer."></img>
             </div>
             <div class="text-container">
             <h3>Servo Motor Block</h3>
@@ -197,19 +197,19 @@
               
                 <li>
                   <p class="tooltip">GoTo
-                    <img src="/vizblocks-website/assets/images/wiggle.gif" class="tooltip-content">
+                    <img src="/vizblocks-website/assets/images/wiggle.gif" class="tooltip-content" alt="Block lighting up all its LEDs in different colours.">
                   </p>
                 </li>
               
                 <li>
                   <p class="tooltip">GoAndReturn
-                    <img src="/vizblocks-website/assets/images/placeholder.jpg" class="tooltip-content">
+                    <img src="/vizblocks-website/assets/images/placeholder.jpg" class="tooltip-content" alt="">
                   </p>
                 </li>
               
                 <li>
                   <p class="tooltip">Wiggle
-                    <img src="/vizblocks-website/assets/images/placeholder.jpg" class="tooltip-content">
+                    <img src="/vizblocks-website/assets/images/placeholder.jpg" class="tooltip-content" alt="Block lighting up all its LEDs in different colours.">
                   </p>
                 </li>
               
@@ -219,11 +219,11 @@
         
           <li class="block-item">
             <div class="img-container">
-              <img src="/vizblocks-website/assets/images/placeholder.jpg" class="intro-img"></img>
+              <img src="/vizblocks-website/assets/images/placeholder.jpg" class="intro-img" alt=""></img>
             </div>
             <div class="text-container">
             <h3>VizBlocks Server</h3>
-            <p><p>The VizBlocks Server is the brains of the operation. It connects the blocks you have in the world to the data streams you are visualising. See how to get started with it by visiting our tutorials page <a href="/vizblocks-website/tutorials">here</a>.</p>
+            <p><p>The VizBlocks Server is the brains of the operation. It connects the blocks you have in the world to the data streams you are visualising. See how to get started with it by visiting our <a href="/vizblocks-website/tutorials">tutorials page</a>.</p>
 </p>
             
             <ul class="hide-on-mobile">
@@ -245,8 +245,8 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.
       </p>
       <div id="overview-container" class="desktop">
-        <img id="desktop-overview" src="/vizblocks-website/assets/images/overview_horizontal.png"></img>
-        <img id="mobile-overview" src="/vizblocks-website/assets/images/overview_vertical.png"></img>
+        <img id="desktop-overview" src="/vizblocks-website/assets/images/overview_horizontal.png" alt="Horizontal illustration of how the VizBlock connects to data sources through the Node-RED platform."></img>
+        <img id="mobile-overview" src="/vizblocks-website/assets/images/overview_vertical.png" alt="Vertical illustration of how the VizBlock connects to data sources through the Node-RED platform."></img>
       </div>
     </div>
   </div>
@@ -269,7 +269,7 @@
         
           <li class="build-item">
             <div class="img-container">
-              <img src="https://media.tarkett-image.com/large/TH_24567081_24594081_24596081_24601081_24563081_24565081_24588081_001.jpg" class="intro-img"></img>
+              <img src="https://media.tarkett-image.com/large/TH_24567081_24594081_24596081_24601081_24563081_24565081_24588081_001.jpg" class="intro-img" alt=""></img>
             </div>
             <div class="text-container">
               <h3>Emotion Visualiser</h3>
@@ -293,7 +293,7 @@
         
           <li class="build-item">
             <div class="img-container">
-              <img src="https://media.tarkett-image.com/large/TH_24567081_24594081_24596081_24601081_24563081_24565081_24588081_001.jpg" class="intro-img"></img>
+              <img src="https://media.tarkett-image.com/large/TH_24567081_24594081_24596081_24601081_24563081_24565081_24588081_001.jpg" class="intro-img" alt=""></img>
             </div>
             <div class="text-container">
               <h3>Plug 'n' Play Privacy Policy</h3>
@@ -312,7 +312,7 @@
         
           <li class="build-item">
             <div class="img-container">
-              <img src="https://media.tarkett-image.com/large/TH_24567081_24594081_24596081_24601081_24563081_24565081_24588081_001.jpg" class="intro-img"></img>
+              <img src="https://media.tarkett-image.com/large/TH_24567081_24594081_24596081_24601081_24563081_24565081_24588081_001.jpg" class="intro-img" alt=""></img>
             </div>
             <div class="text-container">
               <h3>Swap Shop Value Visualiser</h3>
@@ -354,10 +354,10 @@
     <div class="container">
       <div class="inner-footer">
         <p>
-          VizBlocks is a project by <a href="https://www.designinformatics.org/">The Centre For Design Informatics</a>.
+          VizBlocks is a project by <a href="https://www.designinformatics.org/" target="_blank" rel="noopener noreferrer">The Centre For Design Informatics</a>.
         </p>
         <p>
-        Site icons by <a href="http://fontawesome.io/">Font Awesome</a>.
+        Site icons by <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         </p>
       </div>
     </div>
