@@ -6,4 +6,4 @@ email: joe.revans@ed.ac.uk
 image: assets/images/joe.jpg
 image_alt: Portrait of Joe.
 ---
-Joe is a creative technologist with a background in product design. He likes interdisciplinary design and robots (the cuter the better).
+Joe helps to design and fabricate prototypes for research projects for the Design Informatics team. He likes interdisciplinary design and robots (the cuter the better).

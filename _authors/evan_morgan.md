@@ -6,4 +6,4 @@ email: e.morgan@ed.ac.uk
 image: assets/images/evan.jpg
 image_alt: Portrait of Evan.
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.
+Evan is a research software engineer in Design Informatics at the University of Edinburgh. He supports innovation through design and application of data driven technologies across multiple research projects.

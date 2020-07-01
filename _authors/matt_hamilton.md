@@ -6,4 +6,4 @@ email: matt.hamilton@ed.ac.uk
 image: assets/images/matt.jpg
 image_alt: Portrait of Matt.
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.
+Matt is the digital development technician for Edinburgh Collage of Art at the University of Edinburgh. He helps artists and designers be adventurous with programming and safe with electronics.
