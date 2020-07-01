@@ -1,4 +1,6 @@
 - name: designinformatics.org
   link: https://www.designinformatics.org/
+  link_alt: Design Informatics Website (opens in a new tab)
 - name: designinformatics@ed.ac.uk
   link: mailto:designinformatics@ed.ac.uk?subject=VizBlocks Enquiry
+  link_alt: Design Informatics Email (opens a new email window)

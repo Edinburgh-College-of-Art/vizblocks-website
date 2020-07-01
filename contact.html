@@ -16,7 +16,7 @@ h1: Contact
         <div class="inner-contact">
           <h1 class="main-text">Contact Us</h1>
           {% for item in site.data.contact %}
-            <a href="{{ item.link }}">{{ item.name }}</a>
+            <a href="{{ item.link }}">{{ item.name }} title="{{ item.link_alt }}"></a>
           {% endfor %}
           </div>
         </div>

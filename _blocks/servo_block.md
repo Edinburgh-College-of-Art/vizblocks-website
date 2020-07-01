@@ -4,8 +4,8 @@ behaviours:
  - name: GoTo
    arguments:
     - int angle
-   tooltip: /assets/images/wiggle.gif
-   tooltip_alt: Block lighting up all its LEDs in different colours.
+   tooltip: /assets/images/placeholder.jpg
+   tooltip_alt:
  - name: GoAndReturn
    arguments:
     - int angle
@@ -15,8 +15,8 @@ behaviours:
  - name: Wiggle
    arguments:
     - int angleOfSweep
-   tooltip: /assets/images/placeholder.jpg
-   tooltip_alt: Block lighting up all its LEDs in different colours.
+   tooltip: /assets/images/wiggle.gif
+   tooltip_alt: Servo block wiggling a star attachment back and forth.
 image: /assets/images/servo_block.png
 image_alt: Servo block with a feather attached as a pointer.
 ---
