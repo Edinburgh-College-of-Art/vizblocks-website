@@ -2,9 +2,9 @@ strapline:  VizBlocks is a tangible, modular and hackable toolkit for exploring 
 
 intro_text: VizBlocks is a dynamic data visualisation kit which offers public audiences new ways of physically representing data using a modular kit. With a range of materials, mechanisms and tools, VizBlocks can be used to translate data into playful and engaging physical data displays.
 
-blocks_text: While you can use the VizBlocks system to build your own blocks, we have a number of pre-made blocks to get you started. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.
+blocks_text: While you can use the VizBlocks system to build your own blocks, we have a number of pre-made blocks to get you started. You can play with these blocks out of the box in your next data visualisation project, extend their capabilities with new behaviours, or use them as examples to hack together your own custom VizBlocks!
 
-system_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.
+system_text: The VizBlocks system uses a mix of hardware and open source software to support users to build their own data visualisation projects. Don't be afraid if it seems complicated, the toolkit is designed for beginners with a bunch of handy tools to help you get to grips with each component so you can start playing with data ASAP.
 
 # The liquid markdown to render this is currently commented out in index.html
 builds_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo interdum est eu mollis. Sed imperdiet, libero a rhoncus euismod, nisl eros dictum est, sed.
