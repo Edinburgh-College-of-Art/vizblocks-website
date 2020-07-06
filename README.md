@@ -1,4 +1,4 @@
-# VizBlocks Website Read Me
+# Read Me
 
 Hello!
 
@@ -6,7 +6,6 @@ Welcome behind the curtain of the VizBlocks website.
 
 The code can look a bit intimidating, but once you have your bearings it is quite intuitive.
 
----
 ## Running Jekyll
 
 First you will need to install *Jekyll* onto your machine. This can be done by following step 1 and 2 of the [quickstart tutorial on the Jekyll website](https://jekyllrb.com/docs/).
@@ -17,7 +16,6 @@ Once in ../vizblocks-website/ run: `bundle exec jekyll serve`. This will spin up
 
 Now, any changes you make to the website will be pushed to the server when you save the page. You just need to refresh the browser window to see them.
 
----
 ## Updating Content
 
 The content for the site is organised in collection folders.
@@ -34,10 +32,19 @@ New authors, blocks, builds and tutorials can be added by duplicating an existin
 
 After checking that the new content looks nice on the page, you can push the changes to the git repo, which will automatically be mirrored to the live site.
 
----
 ## Joe's to dos
 
-1) Tutorial banner image
 2) Header onto documents
-3) VizBlocks to dos
 4) Share documents that people need
+
+## Some jobs to be done:
+
+- Studio photographs of the blocks
+- Studio videos of the behaviours
+- Turn behaviour videos into .gifs
+- Fill in home page content
+- Write tutorials
+- Mirror documentation from VizBlocks Framework repo
+- Node-RED demo applet
+- Block Visualiser applet
+- VizBlocks Node-RED node

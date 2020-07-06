@@ -18,9 +18,21 @@
         margin-bottom: 15px;
       }
     }
+    .description {
+      font-size: 1.33em;
+      margin-bottom: 40px;
+    }
+    .full-width {
+      width: 100%;
+      height: auto;
+      img {
+        width: 100%;
+      }
+    }
     img {
-      max-width: 400px;
-      max-height: 400px;
+      display: block;
+      height: 500px;
+      margin: 30px auto;
     }
   }
 }

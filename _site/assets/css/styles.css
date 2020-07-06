@@ -249,6 +249,12 @@ footer .inner-footer p a:active { color: #EB0000; background-color: #ffff99; }
 
 .tutorial .inner-tutorial ol li { margin-bottom: 15px; }
 
-.tutorial .inner-tutorial img { max-width: 400px; max-height: 400px; }
+.tutorial .inner-tutorial .description { font-size: 1.33em; margin-bottom: 40px; }
+
+.tutorial .inner-tutorial .full-width { width: 100%; height: auto; }
+
+.tutorial .inner-tutorial .full-width img { width: 100%; }
+
+.tutorial .inner-tutorial img { display: block; height: 500px; margin: 30px auto; }
 
 /*# sourceMappingURL=styles.css.map */
