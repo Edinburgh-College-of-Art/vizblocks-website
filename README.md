@@ -32,11 +32,6 @@ New authors, blocks, builds and tutorials can be added by duplicating an existin
 
 After checking that the new content looks nice on the page, you can push the changes to the git repo, which will automatically be mirrored to the live site.
 
-## Joe's to dos
-
-2) Header onto documents
-4) Share documents that people need
-
 ## Some jobs to be done:
 
 - Studio photographs of the blocks
@@ -48,3 +43,7 @@ After checking that the new content looks nice on the page, you can push the cha
 - Node-RED demo applet
 - Block Visualiser applet
 - VizBlocks Node-RED node
+
+## Important!
+
+- Currently the links in the documentation header are hard coded to point to the github page - if we later want to host the site elsewhere, these will have to be changed.
