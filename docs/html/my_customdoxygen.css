@@ -1754,7 +1754,7 @@ u {
 
 @media (min-width: 768px) { #header.desktop .inner-header { justify-content: space-between; } }
 
-#header.desktop .inner-header .logotype a { display: none; font-family: "handjet"; font-size: 1.5rem; font-variation-settings: "wght" 100, "wdth" 100, "opsz" 150; text-decoration: none; letter-spacing: 5px; color: #f2f2f2; padding: 2px 0px 0px 5px; }
+#header.desktop .inner-header .logotype a { display: none; font-family: "handjet", sans-serif; font-size: 1.5rem; font-variation-settings: "wght" 100, "wdth" 100, "opsz" 150; text-decoration: none; letter-spacing: 5px; color: #f2f2f2; padding: 2px 0px 0px 5px; }
 
 #header.desktop .inner-header .logotype a:hover { color: #EB0000; background-color: #f2f2f2; }
 
