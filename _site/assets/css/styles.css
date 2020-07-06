@@ -89,9 +89,9 @@ code { font-family: "Source Code Pro", monospace; font-weight: 500; padding: 0 2
 
 .banner .img-container img { position: absolute; min-height: 100%; min-width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
-.banner .inner-banner { position: absolute; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; width: 100%; top: 0; left: 0; }
+.banner .inner-banner { position: absolute; display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: 100%; width: 100%; top: 0; left: 0; }
 
-.banner .inner-banner .main-text { color: #EB0000; font-family: "Handjet-VF"; font-size: 20vw; letter-spacing: 2vw; font-variation-settings: "wght" 60, "wdth" 100, "opsz" 150; text-align: center; text-transform: uppercase; padding-left: 2vw; margin: 120px 0 0 0; z-index: 9; }
+.banner .inner-banner .main-text { color: #EB0000; font-family: "Handjet-VF"; font-size: 20vw; letter-spacing: 2vw; font-variation-settings: "wght" 60, "wdth" 100, "opsz" 150; text-align: center; text-transform: uppercase; padding-left: 2vw; margin: 180px 0 10px 0; z-index: 9; }
 
 @media (min-width: 576px) { .banner .inner-banner .main-text { font-size: 20vw; } }
 
@@ -99,9 +99,9 @@ code { font-family: "Source Code Pro", monospace; font-weight: 500; padding: 0 2
 
 @media (min-width: 1600px) { .banner .inner-banner .main-text { font-size: 300px; letter-spacing: 50px; } }
 
-.banner .inner-banner .strapline { color: #EB0000; width: 75%; font-family: "Source Sans Pro", sans-serif; font-size: 2.5rem; text-align: center; margin: 15vh 0 15vh 0; z-index: 9; }
+.banner .inner-banner .strapline { color: #EB0000; width: 75%; font-family: "Source Sans Pro", sans-serif; font-size: 2.5rem; text-align: center; margin-bottom: 40px; z-index: 9; }
 
-.banner .inner-banner .cta-text { color: #EB0000; font-family: "Source Sans Pro", sans-serif; font-size: 2rem; text-align: center; margin: 0; z-index: 9; }
+.banner .inner-banner .cta-text { color: #EB0000; font-family: "Source Sans Pro", sans-serif; font-size: 1.5rem; text-align: center; margin: 0 0 60px 0; z-index: 9; }
 
 .intro { margin-top: 80px; }
 
