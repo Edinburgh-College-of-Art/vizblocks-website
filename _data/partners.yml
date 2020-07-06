@@ -1,7 +1,0 @@
-# The liquid markdown to render this is currently commented out in _includes/intro.html
-- name: Partner 1
-  link: /
-- name: Partner 2
-  link: /
-- name: Partner 3
-  link: /
