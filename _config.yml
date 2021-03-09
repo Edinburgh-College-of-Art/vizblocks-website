@@ -12,4 +12,4 @@ defaults:
     values:
       layout: "tutorial"
 
-baseurl: "/vizblocks-website"
+baseurl: ""
