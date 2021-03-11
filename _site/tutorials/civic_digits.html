@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Civic_digits</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href=/assets/css/styles.css>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+      <header id="header" class="desktop">
+  <div>
+    <div class="inner-header">
+      <div class="logotype">
+        <a href="/" aria-hidden="true" title="Site home">VizBlocks</a>
+      </div>
+      <div class="navigation">
+        <button onclick="toggleBurger()" type="button" aria-label="toggle burger menu">
+          <i class="fa fa-bars"></i>
+        </button>
+        <nav id="menu" class="collapse">
+          
+            <a href="/" class="home">Home</a>
+          
+            <a href="/about" class="about">About</a>
+          
+            <a href="/tutorials/0_getting_started.html" class="start">Get Started</a>
+          
+            <a href="/tutorials" class="tutorials">Tutorials</a>
+          
+            <a href="/docs/html" class="docs">Technical Info</a>
+          
+            <a href="/contact" class="content">Contact</a>
+          
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+
+  const toggleBurger = () => {
+    const menu = document.getElementById('menu');
+    if (menu.className === "collapse") {
+      menu.className = "extend";
+    } else {
+      menu.className = "collapse";
+    }
+  }
+
+  const touchDevice = ('ontouchstart' in document.documentElement);
+  if (touchDevice) {
+    const header = document.getElementById("header");
+    header.className = "mobile";
+  }
+
+  </script>
+</header>
+
+      <div class="content">
+        <div class="tutorial">
+  <div class="container">
+    <div class="inner-tutorial">
+      <h1 id="no-banner">Tutorial: Civic Digits</h1>
+      <h2>Description</h2>
+      <div class="difficulty beginner">Beginner</div>
+      <p class="description">VizBlocks collaborated with the Civic Digits theatre company to create a series of workshops for school children. This tutorial goes through the basic set up for the workshops</p>
+      <h1 id="intro">Intro</h1>
+<p>This tutorial goes through the basics of how to set up and use the Civic Digits VizBlock toolkit. You should have the following items in your kit:</p>
+
+<h2 id="kit-contents">Kit Contents</h2>
+<ul>
+  <li>3 x Servo (motor) VizBlocks</li>
+  <li>2 x LED ring VizBlocks</li>
+  <li>Raspberry Pi with Civic Digits software pre-installed</li>
+  <li>Raspberry Pi power adapter</li>
+  <li>USB WiFi adapter</li>
+</ul>
+
+<p>You will also need a computer and webcam, or a computer and a phone with a camera.</p>
+
+<h1 id="getting-started">Getting Started</h1>
+
+<h2 id="setting-up-the-raspberry-pi-vizblocks-server">Setting up the Raspberry Pi (VizBlocks Server)</h2>
+<ol>
+  <li>Plug the USB WiFi adpater into one of the Pi’s USB ports.</li>
+  <li>Power up the Raspberry Pi. It doesn’t have an on/off switch so it will power on as soon as it is plugged in.</li>
+  <li>If the Raspberry Pi has been configured to connect to the same WiFi network as the computer you’re using then skip to thew next step. Otherwise you should connect your computer (and phone, if using) to the <strong>VizBlocks</strong> network using the password <em>dataisfun</em>.</li>
+  <li>On your computer, navigate to the following page <a href="https://raspberrypi.local:1880/">https://raspberrypi.local:1880/</a>. You will probably be presented with a security warning. Don’t worry about the warning, it’s just because the security certificate on the Pi was generated locally, so the browser doesn’t know if it’s trustworthy - but we do, because we made it :). To bypass the warning om Safari, click <strong>show details</strong> then <strong>visitthiswebsite</strong>. In Chrome, with the browser tab open, you can type <strong>thisisunsafe</strong>. You won’t see the text being typed anywhere, but when you finish it should let you into the website.</li>
+  <li>You should now see a webpage that looks something like this:</li>
+</ol>
+
+<p><img class="full-width" src="/assets/images/civic_digits_nr.png" alt="Image showing what the Node Red interface looks like." /></p>
+
+<ol>
+  <li>This is Node Red - the software that controls the VizBlocks. Each little coloured rectangle is called a node. It may look a bit daunting, but hopefully it will become familiar as you learn more throughout these tutorials.</li>
+  <li>Next we’ll set up the face tracking app. <strong>Note:</strong> the device that you use for this must be connected directly to the VizBlocks WiFi network. On your computer or phone go to the following web page - <a href="https://raspberrypi.local/face-tracker/">https://raspberrypi.local/face-tracker/</a>. You might get the same security warning as before. If so, follow the same steps to bypass the warning. If the browser asks for permission to access your camera then say <em>yes</em>. You should now see the live video from your camera, and a white button at the bottom of the screen, which says START!</li>
+</ol>
+
+<h2 id="setting-up-the-vizblocks">Setting up the VizBlocks</h2>
+<ol>
+  <li>Make sure the blocks are charged. If you turn the block on, you should be able to see at least one red LED just inside the block, below the charging socket. There is a strip of 4 battery level indicator LEDs, with each representing 25% charge. So if all 4 are lit then the battery level is 75-100%, and if only 1 is lit the battery level is 0-25%. The blocks can be charged using a micro usb cable and USB power source. In order for them to charge you will need to turn the blocks off, which can be done by sliding the small power switch to the left (if looking down on the transparent bottom side of the block). The blocks will charge faster if the Raspberry Pi is off, because this will cause the blocks to go into a low power mode. When charging, one of the red battery indicator LEDs should flash. If you don’t see a flashing LED then try a different power source - we recommend using one that provides at least 2 Amps of output power.</li>
+  <li>Make sure the Raspberry Pi is on, then turn each of the blocks on. A blue LED should be visible inside the block. Once the blue LED starts flashing, this means it has successfully connected to the VizBlocks Server, and you’re ready to go!</li>
+</ol>
+
+<h2 id="testing-the-set-up">Testing the set up</h2>
+<p>We’ll now do a basic test to see if the Raspberry Pi and VizBlocks are communicating correctly.</p>
+<ol>
+  <li>Go back to your Node Red web page at <a href="https://raspberrypi.local:1880/">https://raspberrypi.local:1880/</a>.</li>
+  <li>Look for the two blue nodes pictured below:
+<img style="height:180px" src="/assets/images/civic_digits_manual_emotion.png" alt="Image showing the two manual emotion trigger nodes in Node Red." /></li>
+  <li>These blue nodes with the right pointing arrow are inject nodes - they let you <em>inject</em> an input to the software. You can trigger the input manually by clicking the small blue square to the left of the node. Try triggering the happy and sad emotions. You should see the blocks responding: the LED blocks will go orange for happy, and half blue for sad; and the motors on the servo blocks will change their angle.</li>
+</ol>
+
+<h1 id="introducing-the-control-and-admin-interfaces">Introducing the Control and Admin interfaces</h1>
+
+<p>Within Node Red there are two nodes with a &lt;/&gt; symbol on them, called <em>admin</em> and <em>vizblock-controller</em>. These nodes are used to create user interfaces, which provide a more user-friendly way to control and configure Node Red and the VizBlocks. We won’t go into the detail of how these nodes work (yet) but let’s learn a bit more about the interfaces.</p>
+
+<h2 id="admin-interface">Admin Interface</h2>
+<p>The admin interface is designed for workshop supervisors and can be accessed at <a href="https://raspberrypi.local:1880/admin/">https://raspberrypi.local:1880/admin/</a>. Click on <em>Face 1</em> and you should see a set of options like the image below.</p>
+
+<p><img style="height:300px" src="/assets/images/civic_digits_admin.png" alt="Image showing the admin interface" /></p>
+
+<ul>
+  <li>Under <strong>Data Source</strong> you can choose to have the VizBlocks either controlled by emotions (from the face tracker), or by data (from the datasets).</li>
+  <li>Under <strong>Processing</strong> you can decide whether the responses to the data are continuous or discrete. For example, a discrete reaction would mean that the servo blocks would move to one angle for <em>sad</em> and another for <em>happy</em>, with no in-between angle. In continuous mode the blocks will respond to the <em>degree</em> of sadness or happiness.</li>
+  <li>When you are using multiple phones to gather emotion data from the face tracking app, <strong>Phone Mapping</strong> lets you choose which phone should control the blocks. Alternatively, if you turn on the <em>individual features</em> button then different phones can be assigned to each facial feature.</li>
+</ul>
+
+<h2 id="control-interface">Control Interface</h2>
+<p>The control interface is designed for pupils to access from their phones, and can be found at <a href="https://raspberrypi.local:1880/vizblock-controller/">https://raspberrypi.local:1880/vizblock-controller/</a>. Once the interface has loaded, you can select a VizBlock by its name (engraved on the base of the block).</p>
+
+<p><img style="height:280px" src="/assets/images/civic_digits_controller.png" alt="Image showing the controller interface" /></p>
+
+<p>Once a block is selected, you can click <strong>Test commands</strong>, which allows you to send test commands to your block; or <strong>Set behaviour</strong>, which lets you decide how your block should respond to happiness or sadness.</p>
+
+<h1 id="controlling-the-blocks-with-the-face-tracking-app">Controlling the Blocks with the Face Tracking App</h1>
+<ol>
+  <li>On a phone or computer (connected to the VizBlocks WiFi network), go to <a href="https://raspberrypi.local/face-tracker/#1">https://raspberrypi.local/face-tracker/#1</a>. The <strong>#1</strong> at the end or this url specifies that we want this instance of the app to send data as if it was phone number 1. You can change this to whatever number you like, but make sure you go to the <a href="https://raspberrypi.local:1880/admin/">admin interface</a> to specify which phone you want to use to control the blocks (Phone 1 is the default).</li>
+  <li>Click <strong>START!</strong> to begin tracking. You should now see the blocks respond to your facial expressions (happy or sad).</li>
+</ol>
+
+<p>Phone numbers are designated by adding #[phone number] at the end of the face tracking url. So to set up a device as phone 1</p>
+
+
+    </div>
+  </div>
+  <script>
+    if (touchDevice) {
+      const element = document.getElementById("no-banner");
+      element.className = "mobile";
+    }
+  </script>
+</div>
+
+      </div>
+  </body>
+</html>
