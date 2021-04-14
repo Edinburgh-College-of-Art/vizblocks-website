@@ -76,7 +76,7 @@
 <h1 id="getting-started">Getting Started</h1>
 <p>First off, we need to install some software and libraries, which we will use to program the VizBlock</p>
 
-<h2 id="install-arduino-and-libraries">Install Arduino and Libraries</h2>
+<h2 id="install-arduino-and-packages">Install Arduino and Packages</h2>
 <ol>
   <li>Go to <a href="https://www.arduino.cc/en/software">this website</a> and download the appropriate Arduino IDE for your operating system.</li>
   <li>Open the downloaded file and follow the installation instructions (more detailed instructions <a href="https://www.arduino.cc/en/Guide">here</a>).</li>
@@ -89,6 +89,53 @@
 <img style="height: 400px" src="/assets/images/board_selection.png" alt="Image showing the board selection window in the Arduino IDE." /></li>
 </ol>
 
+<h2 id="install-required-libraries">Install Required Libraries</h2>
+<ol>
+  <li>In Arduino go to <em>Tools&gt;Manage Libraries</em></li>
+  <li>In the Library Manager, search for <strong>adafruit neopixel</strong> then click to install the Adafruit Neopixel library.
+<img style="height: 400px" src="/assets/images/arduino_library.png" alt="Image showing the Library Manager in the Arduino IDE." /></li>
+  <li>In the Library Manager, search for <strong>adafruit mqtt</strong> then click to install the Adafruit MQTT library. If prompted to install missing dependencies, select <em>Install all</em>.</li>
+</ol>
+
+<h2 id="install-the-vizblocks-framework">Install the VizBlocks Framework</h2>
+<ol>
+  <li>Download the VizBlocks Framework Library <a href="https://git.ecdf.ed.ac.uk/design-informatics/vizblocks/vizblocksframework/-/archive/master/vizblocksframework-master.zip">here</a>.</li>
+  <li>Unzip the file, then move the unzipped file <code class="language-plaintext highlighter-rouge">vizblocksframework-master</code> to your <code class="language-plaintext highlighter-rouge">Documents/Arduino/libraries</code> folder.</li>
+  <li>Quit and re-open the Arduino software.</li>
+</ol>
+
+<h2 id="check-that-everything-is-installed">Check that Everything is Installed</h2>
+<ol>
+  <li>In Arduino, go to <em>File&gt;Examples&gt;VizBlocks&gt;BasicBlock</em>. This will open an example sketch.</li>
+  <li>Click the tick button (verify) in the top left of the Arduino window. It should say <strong>Compiling sketch…</strong> in the status bar below the code.</li>
+  <li>If the status eventually says <strong>Done compiling</strong> then everything is installed correctly and you’re good to go! If not then you may be missing a required library. Check the error messages for clues, and check that you followed all of the steps above.</li>
+</ol>
+
+<h1 id="uploading-code-to-a-vizblock">Uploading Code to a VizBlock</h1>
+<p>You should now be ready to upload code to your VizBlocks. This gives you a lot of scope to customise what your blocks are capable of. We’ll start by uploading a basic example sketch that includes the basic configuration and behaviours.</p>
+
+<ol>
+  <li>Open the BasicBlocks example sketch from <em>File&gt;Examples&gt;VizBlocks&gt;BasicBlock</em>. Let’s take a look at some important parts of this sketch.</li>
+  <li>The following lines are where we configure the basic settings for our block:</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="n">VizBlock</span> <span class="nf">block</span><span class="p">(</span>
+  <span class="s">"null"</span><span class="p">,</span>         <span class="c1">// Our ID (default: null)</span>
+  <span class="s">"VizBlocks"</span><span class="p">,</span>    <span class="c1">// Wifi Access Point (default: VizBlocks)</span>
+  <span class="s">"password"</span><span class="p">,</span>     <span class="c1">// WiFi Password (change this to the password for your VizBlocks server)</span>
+  <span class="s">"192.168.4.1"</span><span class="p">,</span>  <span class="c1">// IP address of Node RED server (default: 192.168.4.1)</span>
+  <span class="mi">1883</span>            <span class="c1">// Port for Node RED server (default: 1883)</span>
+  <span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>… to be continued</p>
 
     </div>
   </div>
