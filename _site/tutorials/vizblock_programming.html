@@ -78,15 +78,17 @@
 
 <h2 id="install-arduino-and-packages">Install Arduino and Packages</h2>
 <ol>
-  <li>Go to <a href="https://www.arduino.cc/en/software">this website</a> and download the appropriate Arduino IDE for your operating system.</li>
-  <li>Open the downloaded file and follow the installation instructions (more detailed instructions <a href="https://www.arduino.cc/en/Guide">here</a>).</li>
+  <li>Go to <a href="https://www.arduino.cc/en/software" target="_blank">this website</a> and download the appropriate Arduino IDE for your operating system.</li>
+  <li>Open the downloaded file and follow the installation instructions (more detailed instructions <a href="https://www.arduino.cc/en/Guide" target="_blank">here</a>).</li>
   <li>Open the Arduino software and then open the preferences window (<em>Arduino&gt;Preferences</em> on Mac OR <em>File&gt;Preferences</em> on Windows).</li>
   <li>In the preferences window enter <code class="language-plaintext highlighter-rouge">https://arduino.esp8266.com/stable/package_esp8266com_index.json</code> into the <em>Additional Boards Manager URLs</em> field. If there are already entries in this field then you can separate them with commas.
 <img style="height: 400px" src="/assets/images/arduino_preferences.png" alt="Image showing the preferences window in the Arduino IDE." /></li>
-  <li>Open the Board Manager from <em>Tools&gt;Board:&gt;Boards Manager…</em> then enter <code class="language-plaintext highlighter-rouge">esp8266</code> in the search bar, and install the esp8266 package (see image below).
+  <li>Open the Board Manager from <em>Tools&gt;Board:&gt;Boards Manager…</em> then enter <code class="language-plaintext highlighter-rouge">esp8266</code> in the search bar, and install the esp8266 package (see image below). Now close the board manager window.
 <img style="height: 400px" src="/assets/images/esp8266_package.png" alt="Image showing the package installation window in the Arduino IDE." /></li>
-  <li>Go to <em>Tools&gt;Board:&gt;ESP8266 Boards</em> and select <strong>LOLIN(WEMOS) D1 R2 &amp; mini</strong>, as shown in the image below.
+  <li>Arduino needs to know what type of board you want to program, and VizBlocks use the <strong>LOLIN(WEMOS) D1 R2 &amp; mini</strong> board. Go to <em>Tools&gt;Board:&gt;ESP8266 Boards</em> and select <strong>LOLIN(WEMOS) D1 R2 &amp; mini</strong>, as shown in the image below. 
 <img style="height: 400px" src="/assets/images/board_selection.png" alt="Image showing the board selection window in the Arduino IDE." /></li>
+  <li>The tools list will now look something like this: 
+<img style="height: 400px" src="/assets/images/arduino_tools.png" alt="Image showing the tools options in the Arduino IDE, having selected the required board." /></li>
 </ol>
 
 <h2 id="install-required-libraries">Install Required Libraries</h2>
@@ -94,13 +96,13 @@
   <li>In Arduino go to <em>Tools&gt;Manage Libraries</em></li>
   <li>In the Library Manager, search for <strong>adafruit neopixel</strong> then click to install the Adafruit Neopixel library.
 <img style="height: 400px" src="/assets/images/arduino_library.png" alt="Image showing the Library Manager in the Arduino IDE." /></li>
-  <li>In the Library Manager, search for <strong>adafruit mqtt</strong> then click to install the Adafruit MQTT library. If prompted to install missing dependencies, select <em>Install all</em>.</li>
+  <li>In the Library Manager, search for <strong>adafruit mqtt</strong> then click to install the Adafruit MQTT library. If prompted to install missing dependencies, select <em>Install all</em>. Close the Library Manager.</li>
 </ol>
 
 <h2 id="install-the-vizblocks-framework">Install the VizBlocks Framework</h2>
 <ol>
-  <li>Download the VizBlocks Framework Library <a href="https://git.ecdf.ed.ac.uk/design-informatics/vizblocks/vizblocksframework/-/archive/master/vizblocksframework-master.zip">here</a>.</li>
-  <li>Unzip the file, then move the unzipped file <code class="language-plaintext highlighter-rouge">vizblocksframework-master</code> to your <code class="language-plaintext highlighter-rouge">Documents/Arduino/libraries</code> folder.</li>
+  <li>Download the VizBlocks Framework Library <a href="https://git.ecdf.ed.ac.uk/design-informatics/vizblocks/vizblocksframework/-/archive/master/vizblocksframework-master.zip" target="_blank">here</a>.</li>
+  <li>In Arduino, go to <em>Sketch&gt;Include Library&gt;Add .ZIP Library…</em>, then navigate to the location of the zip file you just downloaded and open it. In the <em>Sketch&gt;Include Library</em> menu you should now see <em>VizBlocks</em> listed somewhere near the bottom of the menu.</li>
   <li>Quit and re-open the Arduino software.</li>
 </ol>
 
@@ -119,23 +121,54 @@
   <li>The following lines are where we configure the basic settings for our block:</li>
 </ol>
 
-<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="code"><pre><span class="n">VizBlock</span> <span class="nf">block</span><span class="p">(</span>
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">VizBlock</span> <span class="nf">block</span><span class="p">(</span>
   <span class="s">"null"</span><span class="p">,</span>         <span class="c1">// Our ID (default: null)</span>
   <span class="s">"VizBlocks"</span><span class="p">,</span>    <span class="c1">// Wifi Access Point (default: VizBlocks)</span>
   <span class="s">"password"</span><span class="p">,</span>     <span class="c1">// WiFi Password (change this to the password for your VizBlocks server)</span>
   <span class="s">"192.168.4.1"</span><span class="p">,</span>  <span class="c1">// IP address of Node RED server (default: 192.168.4.1)</span>
   <span class="mi">1883</span>            <span class="c1">// Port for Node RED server (default: 1883)</span>
-  <span class="p">);</span>
-</pre></td></tr></tbody></table></code></pre></figure>
+  <span class="p">);</span></code></pre></figure>
 
-<p>… to be continued</p>
+<ol>
+  <li>You will probably need to change the password to the one provided for your VizBlocks server.</li>
+  <li>Further down the page you will see the following lines:</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">Adafruit_NeoPixel</span> <span class="nf">strip</span><span class="p">(</span><span class="n">LED_COUNT</span><span class="p">,</span> <span class="n">LED_PIN</span><span class="p">,</span> <span class="n">NEO_GRBW</span> <span class="o">+</span> <span class="n">NEO_KHZ800</span><span class="p">);</span> <span class="c1">// Type 1</span>
+<span class="c1">//Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800); // Type 2</span></code></pre></figure>
+
+<p>These lines are used to set up the LEDs if you are programming an LED block. The <em>//</em> before the second line turns that line into a comment, which means it isn’t read as part of the code - we say it’s “commented out”. The LED blocks use two different types of LED ring and you need to program the block for the right type, otherwise you’ll see your LEDs behaving very strangely. If you’re getting strange LED behaviour then try switching the LED type in the code by deleting the <em>//</em> before whichever line is commented out and inserting <em>//</em> before the line that wasn’t previously commented out. So to switch to using LED type 2, the code would look like this:</p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="c1">//Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRBW + NEO_KHZ800); // Type 1</span>
+<span class="n">Adafruit_NeoPixel</span> <span class="nf">strip</span><span class="p">(</span><span class="n">LED_COUNT</span><span class="p">,</span> <span class="n">LED_PIN</span><span class="p">,</span> <span class="n">NEO_GRB</span> <span class="o">+</span> <span class="n">NEO_KHZ800</span><span class="p">);</span> <span class="c1">// Type 2</span></code></pre></figure>
+
+<ol>
+  <li>Next you have a block of code that starts with:</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="c1">// This runs when the VizBlock starts up</span>
+<span class="p">{</span></code></pre></figure>
+
+<p>and ends with:</p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++">  <span class="c1">// Initialise the block</span>
+  <span class="n">block</span><span class="p">.</span><span class="n">set_wifi</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+  <span class="n">block</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="err">}</span></code></pre></figure>
+
+<p>This is where you set up your VizBlock and customise its capabilities. Inside this block you will see a set of lines where we define behaviours for a servo block, and a set of lines with behaviours for an LED block. Here are the lines that define the servo behaviours:</p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++">  <span class="c1">// Add in two different versions of the servo wiggling, with different speed parameters</span>
+  <span class="n">block</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="k">new</span> <span class="nf">ServoWiggle</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="s">"slow_wiggle"</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="p">);</span>
+  <span class="n">block</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="k">new</span> <span class="nf">ServoWiggle</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="s">"fast_wiggle"</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">);</span>
+   
+  <span class="c1">// Add in a behaviour that just goes to a certain angle, with the default name 'goto'</span>
+  <span class="n">block</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="k">new</span> <span class="nf">ServoGoTo</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="s">"goto"</span><span class="p">)</span> <span class="p">);</span>
+
+  <span class="c1">// Add in a behaviour that rotates from 10 to 170 degrees and back again</span>
+  <span class="n">block</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="k">new</span> <span class="nf">ServoGoAndReturn</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span><span class="s">"drop"</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">170</span><span class="p">)</span> <span class="p">);</span> <span class="c1">// (servo, name, delay, pause, start angle, end angle)</span></code></pre></figure>
+
+<p>We use the <code class="language-plaintext highlighter-rouge">block.add()</code> function to add a new behaviour to the block. You can choose from a set of behaviours, which are documented in more detail <a href="/docs/html/class_behaviour.html" target="_blank">here</a>. There are currently 3 types of servo behaviour: <strong>ServoWiggle</strong>, <strong>ServoGoTo</strong>, and <strong>ServoGoAndReturn</strong></p>
 
     </div>
   </div>
