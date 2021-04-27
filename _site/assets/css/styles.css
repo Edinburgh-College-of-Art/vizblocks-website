@@ -436,5 +436,10 @@ footer .inner-footer p a:active { color: #EB0000; background-color: #ffff99; }
 .highlight .il { color: #009999; }
 
 /* Literal.Number.Integer.Long */
+.highlight pre code * { white-space: nowrap; }
+
+.highlight pre { overflow-x: auto; }
+
+.highlight pre code { white-space: pre; }
 
 /*# sourceMappingURL=styles.css.map */
