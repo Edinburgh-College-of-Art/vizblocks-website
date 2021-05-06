@@ -116,10 +116,9 @@
 <h1 id="uploading-code-to-a-vizblock">Uploading Code to a VizBlock</h1>
 <p>You should now be ready to upload code to your VizBlocks. This gives you a lot of scope to customise what your blocks are capable of. We’ll start by uploading a basic example sketch that includes the basic configuration and behaviours.</p>
 
-<ol>
-  <li>Open the BasicBlocks example sketch from <em>File&gt;Examples&gt;VizBlocks&gt;BasicBlock</em>. Let’s take a look at some important parts of this sketch.</li>
-  <li>The following lines are where we configure the basic settings for our block:</li>
-</ol>
+<p> 1. Open the BasicBlocks example sketch from <em>File&gt;Examples&gt;VizBlocks&gt;BasicBlock</em>. Let’s take a look at some important parts of this sketch.</p>
+
+<p> 2. The following lines are where we configure the basic settings for our block:</p>
 
 <figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">VizBlock</span> <span class="nf">block</span><span class="p">(</span>
   <span class="s">"null"</span><span class="p">,</span>         <span class="c1">// Our ID (default: null)</span>
@@ -129,10 +128,9 @@
   <span class="mi">1883</span>            <span class="c1">// Port for Node RED server (default: 1883)</span>
   <span class="p">);</span></code></pre></figure>
 
-<ol>
-  <li>You will probably need to change the password to the one provided for your VizBlocks server.</li>
-  <li>Further down the page you will see the following lines:</li>
-</ol>
+<p> 3. You will probably need to change the password to the one provided for your VizBlocks server.</p>
+
+<p> 4. Further down the page you will see the following lines:</p>
 
 <figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">Adafruit_NeoPixel</span> <span class="nf">strip</span><span class="p">(</span><span class="n">LED_COUNT</span><span class="p">,</span> <span class="n">LED_PIN</span><span class="p">,</span> <span class="n">NEO_GRBW</span> <span class="o">+</span> <span class="n">NEO_KHZ800</span><span class="p">);</span> <span class="c1">// Type 1</span>
 <span class="c1">//Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800); // Type 2</span></code></pre></figure>
@@ -142,19 +140,18 @@
 <figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="c1">//Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRBW + NEO_KHZ800); // Type 1</span>
 <span class="n">Adafruit_NeoPixel</span> <span class="nf">strip</span><span class="p">(</span><span class="n">LED_COUNT</span><span class="p">,</span> <span class="n">LED_PIN</span><span class="p">,</span> <span class="n">NEO_GRB</span> <span class="o">+</span> <span class="n">NEO_KHZ800</span><span class="p">);</span> <span class="c1">// Type 2</span></code></pre></figure>
 
-<ol>
-  <li>Once you’ve changed the password and selected the LED type (if you’re using an LED block), then you can upload this example code to a VizBlock. First, plug the VizBlock into your computer using a micro USB cable.</li>
-  <li>Next, go to <em>Tools&gt;Port</em> in Arduino. You will see a list of ports (see Figure below for an example), which will vary according to the devices connected to your computer. You should see a port that includes <em>usbserial</em> (Mac) or <em>COM</em> (Windows). Select this port - or if you have multiple ports then you can work out which one corresponds to your VizBlock by unplugging the USB cable and seeing which port disappears from the list. <em>Note: some USB cables are just built for charging devices and won’t work, so if the VizBlock doesn’t show up in your ports list then try a different cable. You can also try re-starting the Arduino software.</em>
-<img style="height: 200px" src="/assets/images/arduino_ports.png" alt="Image showing the ports list in the Arduino IDE." /></li>
-  <li>Upload the code to your VizBlock by clicking the right-pointing arrow in the top left of the Arduino software. The software will compile the sketch first, then upload it to the VizBlock. You will see a progress bar below the sketch in Arduino, and it should say <strong>Done uploading</strong> if everything worked.</li>
-</ol>
+<p> 5. Once you’ve changed the password and selected the LED type (if you’re using an LED block), then you can upload this example code to a VizBlock. First, plug the VizBlock into your computer using a micro USB cable.</p>
+
+<p> 6. Next, go to <em>Tools&gt;Port</em> in Arduino. You will see a list of ports (see Figure below for an example), which will vary according to the devices connected to your computer. You should see a port that includes <em>usbserial</em> (Mac) or <em>COM</em> (Windows). Select this port - or if you have multiple ports then you can work out which one corresponds to your VizBlock by unplugging the USB cable and seeing which port disappears from the list. <em>Note: some USB cables are just built for charging devices and won’t work, so if the VizBlock doesn’t show up in your ports list then try a different cable. You can also try re-starting the Arduino software.</em>
+<img style="height: 200px" src="/assets/images/arduino_ports.png" alt="Image showing the ports list in the Arduino IDE." /></p>
+
+<p> 7. Upload the code to your VizBlock by clicking the right-pointing arrow in the top left of the Arduino software. The software will compile the sketch first, then upload it to the VizBlock. You will see a progress bar below the sketch in Arduino, and it should say <strong>Done uploading</strong> if everything worked.</p>
 
 <h1 id="customising-vizblock-behaviours">Customising VizBlock Behaviours</h1>
 
-<ol>
-  <li>Open the BasicBlock example sketch that we used previously.</li>
-  <li>If you scroll down, you will see a segment of code that starts with:</li>
-</ol>
+<p> 1. Open the BasicBlock example sketch that we used previously.</p>
+
+<p> 2. If you scroll down, you will see a segment of code that starts with:</p>
 
 <figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="c1">// This runs when the VizBlock starts up</span>
 <span class="p">{</span></code></pre></figure>
@@ -166,10 +163,9 @@
   <span class="n">block</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
 <span class="err">}</span></code></pre></figure>
 
-<ol>
-  <li>This code segment is where you set up your VizBlock and customise its capabilities. Inside this segment you will see a set of lines where we define behaviours for a servo block, and a set of lines with behaviours for an LED block.</li>
-  <li>Here are the lines that define the servo behaviours:</li>
-</ol>
+<p> 2. This code segment is where you set up your VizBlock and customise its capabilities. Inside this segment you will see a set of lines where we define behaviours for a servo block, and a set of lines with behaviours for an LED block.</p>
+
+<p> 3. Here are the lines that define the servo behaviours:</p>
 
 <figure class="highlight"><pre><code class="language-c--" data-lang="c++">  <span class="c1">// Add in two different versions of the servo wiggling, with different speed parameters</span>
   <span class="n">block</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="k">new</span> <span class="nf">ServoWiggle</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="s">"slow_wiggle"</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="p">);</span>
@@ -181,25 +177,23 @@
   <span class="c1">// Add in a behaviour that rotates from 10 to 170 degrees and back again</span>
   <span class="n">block</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="k">new</span> <span class="nf">ServoGoAndReturn</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span><span class="s">"drop"</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">170</span><span class="p">)</span> <span class="p">);</span> <span class="c1">// (servo, name, delay, pause, start angle, end angle)</span></code></pre></figure>
 
-<ol>
-  <li>We use the <code class="language-plaintext highlighter-rouge">block.add()</code> function to add a new behaviour to the block. You can choose from a set of behaviours, which are documented in more detail <a href="/docs/html/class_behaviour.html" target="_blank">here</a>. There are currently 3 types of servo behaviour: <strong>ServoWiggle</strong>, <strong>ServoGoTo</strong>, and <strong>ServoGoAndReturn</strong>. For each of these behaviours we can define certain parameters (such as the behaviour name). The parameters are written in brackets after the behaviour, and separated by commas.</li>
-  <li>You can modify these existing behaviours, or delete them and add your own. For example, if we wanted to create a ‘medium wiggle’ behaviour, where the wiggle was somewhere in-between the existing slow and fast wiggles, then we could write a new line:</li>
-</ol>
+<p> 4. We use the <code class="language-plaintext highlighter-rouge">block.add()</code> function to add a new behaviour to the block. You can choose from a set of behaviours, which are documented in more detail <a href="/docs/html/class_behaviour.html" target="_blank">here</a>. There are currently 3 types of servo behaviour: <strong>ServoWiggle</strong>, <strong>ServoGoTo</strong>, and <strong>ServoGoAndReturn</strong>. For each of these behaviours we can define certain parameters (such as the behaviour name). The parameters are written in brackets after the behaviour, and separated by commas.</p>
+
+<p> 5. You can modify these existing behaviours, or delete them and add your own. For example, if we wanted to create a ‘medium wiggle’ behaviour, where the wiggle was somewhere in-between the existing slow and fast wiggles, then we could write a new line:</p>
 
 <figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">block</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="k">new</span> <span class="nf">ServoWiggle</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="s">"medium_wiggle"</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">);</span></code></pre></figure>
 
 <p>Here we have changed the third parameter passed to the ServoWiggle behaviour to 5. This number represents the time taken for the servo to complete its wiggles - so a lower number means the servo will wiggle faster. We have also changed the second parameter (the behaviour name) to ‘medium_wiggle’. So to use this behaviour in Node Red you could send the message <code class="language-plaintext highlighter-rouge">medium_wiggle 90</code> to the VizBlock, which would wiggle the servo from 0-90 degrees at a medium speed. The other behaviours can be adjusted in the same way, by modifying the parameters in brackets. The first parameter in each case is <code class="language-plaintext highlighter-rouge">s1</code>, which specifies which servo we’re using. There’s only one servo, so you shouldn’t need to adjust this parameter.</p>
-<ol>
-  <li>A similar process can be used to cutomise the LED behaviours. The LEDs currently have 3 types of behaviour: <strong>LightSomeLEDs</strong>, <strong>LightAllLEDs</strong>, and <strong>BreatheLEDs</strong>. So, let’s say we want to add a new behaviour that allows you to light a specified number of LEDs purple by sending the message <code class="language-plaintext highlighter-rouge">purple_leds #</code> in Node Red, where <code class="language-plaintext highlighter-rouge">#</code> is replaced with the number of LEDs you’d like to light (e.g. <code class="language-plaintext highlighter-rouge">purple_leds 6</code> to light 6 LEDs purple). To achieve this we could add the following line, which defines this new behaviour:</li>
-</ol>
+
+<p> 6. A similar process can be used to cutomise the LED behaviours. The LEDs currently have 3 types of behaviour: <strong>LightSomeLEDs</strong>, <strong>LightAllLEDs</strong>, and <strong>BreatheLEDs</strong>. So, let’s say we want to add a new behaviour that allows you to light a specified number of LEDs purple by sending the message <code class="language-plaintext highlighter-rouge">purple_leds #</code> in Node Red, where <code class="language-plaintext highlighter-rouge">#</code> is replaced with the number of LEDs you’d like to light (e.g. <code class="language-plaintext highlighter-rouge">purple_leds 6</code> to light 6 LEDs purple). To achieve this we could add the following line, which defines this new behaviour:</p>
 
 <figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">block</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="k">new</span> <span class="nf">LightSomeLEDs</span><span class="p">(</span><span class="o">&amp;</span><span class="n">strip</span><span class="p">,</span> <span class="s">"purple_leds"</span><span class="p">,</span> <span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="mi">117</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">168</span><span class="p">)</span> <span class="p">));</span></code></pre></figure>
 
 <p>Here we have modified the second parameter (the name of the behaviour) to <code class="language-plaintext highlighter-rouge">purple_leds</code> and we have changed the colour value by modifying the RGB (red, green, blue) values passed to the <code class="language-plaintext highlighter-rouge">strip.Color</code> function to <code class="language-plaintext highlighter-rouge">117, 15, 168</code>. These RGB values can be obtained using any colour picking tool, such as <a href="https://www.google.com/search?q=color+picker" target="_blank">this</a>.</p>
-<ol>
-  <li>Once you have customised the behaviours then you can save your custom sketch using <em>File&gt;Save As..</em>.</li>
-  <li>Now upload the sketch to your VizBlock!</li>
-</ol>
+
+<p> 7. Once you have customised the behaviours then you can save your custom sketch using <em>File&gt;Save As..</em>.</p>
+
+<p> 8. Now upload the sketch to your VizBlock!</p>
 
     </div>
   </div>
