@@ -57,15 +57,20 @@ The admin interface is designed for workshop supervisors and can be accessed at 
 - When you are using multiple phones to gather emotion data from the face tracking app, **Phone Mapping** lets you choose which phone should control the blocks. Alternatively, if you turn on the *individual features* button then different phones can be assigned to each facial feature.
 
 ## Control Interface
-The control interface is designed for pupils to access from their phones, and can be found at [https://raspberrypi.local:1880/vizblock-controller/](https://raspberrypi.local:1880/vizblock-controller/). Once the interface has loaded, you can select a VizBlock by its name (engraved on the base of the block).
+The control interface is designed for pupils to access from their phones, and can be found at [https://raspberrypi.local:1880/vizblock-controller/](https://raspberrypi.local:1880/vizblock-controller/){:target="_blank"}. Once the interface has loaded, you can select a VizBlock by its name (engraved on the base of the block).
 
 <img style="height:280px" src="{{ "/assets/images/civic_digits_controller.png" | prepend: site.baseurl }}" alt="Image showing the controller interface" />
 
 Once a block is selected, you can click **Test commands**, which allows you to send test commands to your block; or **Set behaviour**, which lets you decide how your block should respond to happiness or sadness.
 
 # Controlling the Blocks with the Face Tracking App
-1. On a phone or computer (connected to the VizBlocks WiFi network), go to [https://raspberrypi.local/face-tracker/#1](https://raspberrypi.local/face-tracker/#1). The **#1** at the end or this url specifies that we want this instance of the app to send data as if it was phone number 1. You can change this to whatever number you like, but make sure you go to the [admin interface](https://raspberrypi.local:1880/admin/) to specify which phone you want to use to control the blocks (Phone 1 is the default).
+1. On a phone or computer (connected to the VizBlocks WiFi network), go to [https://192.168.4.1/face-tracker/#1](https://192.168.4.1/face-tracker/#1){:target="_blank"}. The **#1** at the end or this url specifies that we want this instance of the app to send data as if it was phone number 1. You can change this to whatever number you like, but make sure you go to the [admin interface](https://192.168.4.1:1880/admin/){:target="_blank"} to specify which phone you want to use to control the blocks (Phone 1 is the default).
 2. Click **START!** to begin tracking. You should now see the blocks respond to your facial expressions (happy or sad).
 
 Phone numbers are designated by adding #[phone number] at the end of the face tracking url. So to set up a device as phone 1
 
+# Controlling the Blocks with Weather Datasets
+1. On a phone or computer (connected to the VizBlocks WiFi network), go to [https://192.168.4.1/face-tracker/dataset.html](https://192.168.4.1/face-tracker/dataset.html){:target="_blank"}.
+2. On the top dropdown menu, select a weather dataset (either Leuchars or London), and then click LOAD DATA.
+3. Click on a row in the weather data table to send that data to the VizBlock server OR press the play button in the bottom right corner to automatically cycle through the data.
+4. To view the data on the VizBlock Face, go to the [admin interface](https://192.168.4.1:1880/admin/){:target="_blank"} and select `Dataset` as the Data Source for Face 1 and/or Face 2.
