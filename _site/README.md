@@ -12,7 +12,7 @@ First you will need to install *Jekyll* onto your machine. This can be done by f
 
 Then, navigate in the terminal to the folder holding the VizBlocks website. A useful cheat here can be to type `cd ` into the terminal, drag and drop the folder into the terminal window and then press enter.
 
-Once in ../vizblocks-website/ run: `bundle exec jekyll serve`. This will spin up a development server at [localhost:4000/vizblocks-website/].
+Once in ../vizblocks-website/ run `bundle install`, then `bundle exec jekyll serve`. This will spin up a development server at [localhost:4000].
 
 Now, any changes you make to the website will be pushed to the server when you save the page. You just need to refresh the browser window to see them.
 

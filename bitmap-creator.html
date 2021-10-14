@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class='v2'>
+
+<head>
+    <meta charset="utf-8">
+    <title> LED Matrix Bitmap Generator</title>
+    <style type='text/css'>
+        body {
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            background: #000000;
+            padding: 0 40px 40px 40px;
+        }
+
+        html body .region-inner {
+            min-width: 0;
+            max-width: 100%;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div align="center">
+        <table border="0" cellpadding="0" cellspacing="0" class="leds" id="LCDARRAY"
+            style="cursor: pointer; table-layout: fixed;">
+        </table>
+    </div>
+    <br>
+    <div style="text-align: center;">
+        <div valign="top">
+            Bitmap binary values:<br />
+            <textarea cols="20" id="ltxtBinary" rows="16"></textarea>
+            <br />
+            <input onclick="xresetall()" style="height: 30px; width: 130px;" type="button" value="Clear" />
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            return createTable();
+        }
+
+        function xtoggle(obj) {
+            if (obj.innerHTML ==
+                "&nbsp;0") {
+                obj.style.background =
+                    "orangered radial-gradient(circle 9px, #ffcb21 0%, #edbc1a 90%, black)";
+                obj.innerHTML =
+                    "&nbsp;1";
+            } else {
+                obj.style.background =
+                    "lightgrey radial-gradient(circle 9px, #666666 0%, #777777 60%, grey 90%, black)";
+                obj.innerHTML =
+                    "&nbsp;0";
+            }
+            xcreatebincode();
+        }
+
+        function xresetall() {
+            var tdObj;
+
+            for (var i = 1; i < (16 * 8 + 1); i++) {
+                tdObj = document
+                    .getElementById(i);
+                tdObj.style.background =
+                    "lightgrey radial-gradient(circle 9px, #666666 0%, #777777 60%, grey 90%, black)";
+                tdObj.innerHTML =
+                    "&nbsp;0";
+            }
+            xcreatebincode();
+        }
+
+        function xcreatebincode() {
+            var tdObj;
+            var binObj = document
+                .getElementById(
+                    "ltxtBinary");
+            binObj.value = "";
+            for (var i = 1; i <= (16 * 8); i++) {
+                tdObj = document
+                    .getElementById(i);
+                if (((i - 1) == 0) || (((i - 1) % (8) == 0))) {
+                    if (i - 1 == 0)
+                        binObj.value +=
+                        "{B";
+                    else
+                        binObj.value +=
+                        "B";
+                }
+                if (tdObj.innerHTML == "&nbsp;0") {
+                    binObj.value += "0";
+                } else {
+                    binObj.value += "1";
+                }
+                if ((i % (8)) == 0) {
+                    if (i != (16 * 8))
+                        binObj.value +=
+                        ",\n";
+                    else
+                        binObj.value +=
+                        "}";
+                }
+            }
+        }
+
+        function createTable() {
+            cn = 16;
+            rn = 8;
+            var Table = document
+                .getElementById(
+                    "LCDARRAY");
+            if (Table) {
+                while (Table.rows
+                    .length > 0) {
+                    Table.deleteRow(0);
+                }
+            }
+
+            for (var r = 0; r <
+                parseInt(rn, 10); r++) {
+                var x = document
+                    .getElementById(
+                        'LCDARRAY')
+                    .insertRow(r);
+                for (var c = 0; c < parseInt(cn, 10); c++) {
+                    var y = x
+                        .insertCell(c);
+                    y.innerHTML = "0";
+                    y.id = (c * rn) + (
+                        rn - r);
+                    y.onmousedown =
+                        function () {
+                            xtoggle(
+                                this);
+                        };
+                    y.style =
+                        "background-color: #383838; font-size: 0px;";
+                }
+            }
+            xresetall();
+            var Table = document
+                .getElementById(
+                    "LCDARRAY");
+            if (Table) {
+                Table.style =
+                    'cursor: pointer; height: ' +
+                    (rn * 20) +
+                    'px; width: ' + (
+                        cn * 20) +
+                    'px;';
+                Table.border = "0";
+                Table.cellpadding = "0";
+                Table.cellspacing = "0";
+            }
+
+        }
+    </script>
+</body>
+</html>
